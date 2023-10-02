@@ -12,7 +12,7 @@
 
   The WDX 180° curriculum, along with all related material (exercises, code, etc.), **is and will always be free and open-source** under the GPLv3 license.
 
-  You can find the [Syllabus here](curriculum/README.md).
+  You can find the [Syllabus here](curriculum/INDEX.md).
 </details>
 
 <!-- Where do I start? -->
@@ -186,7 +186,7 @@
 <details markdown="1">
   <summary><h3>Syllabus</h3></summary>
 
-  You can find the [Syllabus here](curriculum/README.md#syllabus).
+  You can find the [Syllabus here](curriculum/INDEX.md#syllabus).
 </details>
 
 <!-- How to Study / Productivity tips -->
@@ -211,7 +211,7 @@
 
 ### Finished setting everything up? 
 
-[**➡️ LET'S GET STARTED**](/curriculum/README.md)
+[**➡️ LET'S GET STARTED**](/curriculum/INDEX.md)
 
 ---
 
@@ -230,6 +230,7 @@
 The curriculum draws heavily on the following amazing resources:
 
 - [**Mozilla Developer Network**](https://developer.mozilla.org/en-US/)
+- [**CodeYourFuture**](https://codeyourfuture.io/about/)
 - [**Codecademy**](https://www.codecademy.com/)
 - [**javascript.info** by Ilya Kantor](https://www.linkedin.com/in/iliakan/)
 - [**Kyle Simpson** aka getify, author of ___You Don't know JS___](https://www.linkedin.com/in/getify/)
