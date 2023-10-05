@@ -303,9 +303,9 @@ Before you dive in, **make sure that you have your notebook** and colored pens b
 
   - [Read: **HTML**](resources/HTML.md) to get a quick introduction to HTML. 
 
-  - [Read: **What will your website look like?**](resources/What_will_your_website_look_like/README.md)
+  - [Read: **What will your website look like?**](resources/What_will_your_website_look_like/index.md)
 
-  - [Read: **HTML Basics**](resources/HTML_Basics/README.md)
+  - [Read: **HTML Basics**](resources/HTML_Basics/index.md)
     - <details>
         <summary>What you'll learn</summary>
         <ul>
@@ -364,13 +364,13 @@ Before you dive in, **make sure that you have your notebook** and colored pens b
 
   - Complete the following exercises and update the progress CSV files accordingly:
 
-  - [Complete: **Parent-Child Relationships** exercise](./exercises/1-parent-child/INDEX.md)
+  - [Complete: **Parent-Child Relationships** exercise](./exercises/1-parent-child/index.md)
     - You can find this exercise, in the following path in your forked repository: `curriculum/week01/exercises/1-parent-child/`
 
-  - [Complete: **HTML Attributes** exercise](./exercises/2-html-attributes/INDEX.md)
+  - [Complete: **HTML Attributes** exercise](./exercises/2-html-attributes/index.md)
     - You can find this exercise, in the following path in your forked repository: `curriculum/week01/exercises/2-html-attributes/`
 
-  - [Complete: **Semantic HTML** exercise](./exercises/3-semantic-html/INDEX.md)
+  - [Complete: **Semantic HTML** exercise](./exercises/3-semantic-html/index.md)
     - You can find this exercise, in the following path in your forked repository: `curriculum/week01/exercises/3-semantic-html/`
 
   - [Complete the **Markdown Tutorial** exercise](https://www.markdowntutorial.com/)
@@ -423,7 +423,7 @@ Apart from creating HTML content and styling it with CSS, you also have some ins
   
   You can use Chrome's `View Source` functionality _(right-click anywhere on the web page to see the option appear)_ to check the source code. As you can see, this is a pretty old HTML standard! 
   
-  **Your task is to rewrite the code** of this webpage in modern HTML (v5) and style it using CSS! Once everything is ready, make sure that your code lives under the `user/week01/day04/cern/` directory, commit and push to submit your solution to your forked repository.
+  **Your task is to rewrite the code** of this webpage in modern HTML (v5) and style it using CSS! Once everything is ready, make sure that your code lives under the `user/week01/exercises/day04/cern/` directory, commit and push to submit your solution to your forked repository.
 
   ---
 
