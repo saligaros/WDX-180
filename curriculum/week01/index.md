@@ -10,6 +10,10 @@ Welcome to the first part of our curriculum, WDX 60°. The goal of this first pa
 
 Before you dive in, **make sure that you have your notebook** and colored pens besides your computer, in order to pause and take those invaluable notes as you move along the curriculum.
 
+At this point, it's extremely important to let you know that **sharing solutions** on Slack is **not allowed** and will be removed upon first notice. 
+
+We encourage you to **help and support each other** but in a constructive and helpful manner: guiding other participants towards the right direction by asking questions, providing hints, suggesting alternatives and generally cultivating a problem solving mindset instead of depriving others of the capacity to process a problem by handing them a ready-made solution. 
+
 **Let's get started!**
 
 <!-- Week 1 - Day 1 | Onboarding & Basics of Computing -->
@@ -109,7 +113,7 @@ Before you dive in, **make sure that you have your notebook** and colored pens b
     - Duration: 5min
     - Level: Beginner
 
-  - [Read: **Positional Notation, Binary, Octal and Hexadecimal numeric systems**](resources/Hexadecimal/README.md)
+  - [Read: **Positional Notation, Binary, Octal and Hexadecimal numeric systems**](resources/Hexadecimal/index.md)
 
 ### Summary
 
@@ -195,7 +199,7 @@ Before you dive in, **make sure that you have your notebook** and colored pens b
     - Level: Beginner
     - Captions: Yes
 
-  - [Read: **How the Internet works**](resources/How_the_Internet_works/README.md) to get some additional information and another perspective on how the Internet works.
+  - [Read: **How the Internet works**](resources/How_the_Internet_works/index.md) to get some additional information and another perspective on how the Internet works.
     - Reading time: 5min
     - Level: Beginner
 
@@ -362,15 +366,19 @@ Before you dive in, **make sure that you have your notebook** and colored pens b
 
 ### Exercises
 
+  **TIP:** Before starting to with the HTML exercises, perhaps, you can spend a few minutes to watch [this video](https://www.youtube.com/watch?v=n7wkAp9_bqw){:target="_blank"} which walks you through the process of setting up VSCode to efficiently work with the exercises.
+
+  ---
+
   - Complete the following exercises and update the progress CSV files accordingly:
 
-  - [Complete: **Parent-Child Relationships** exercise](./exercises/1-parent-child/index.md)
+  - [Complete: **Parent-Child Relationships** exercise](./exercises/1-parent-child/instructions.md)
     - You can find this exercise, in the following path in your forked repository: `curriculum/week01/exercises/1-parent-child/`
 
-  - [Complete: **HTML Attributes** exercise](./exercises/2-html-attributes/index.md)
+  - [Complete: **HTML Attributes** exercise](./exercises/2-html-attributes/instructions.md)
     - You can find this exercise, in the following path in your forked repository: `curriculum/week01/exercises/2-html-attributes/`
 
-  - [Complete: **Semantic HTML** exercise](./exercises/3-semantic-html/index.md)
+  - [Complete: **Semantic HTML** exercise](./exercises/3-semantic-html/instructions.md)
     - You can find this exercise, in the following path in your forked repository: `curriculum/week01/exercises/3-semantic-html/`
 
   - [Complete the **Markdown Tutorial** exercise](https://www.markdowntutorial.com/)
@@ -406,7 +414,7 @@ Before you dive in, **make sure that you have your notebook** and colored pens b
   - Introduction to CSS
   - Publishing your website
 
-  - [Read: **CSS Basics**](resources/CSS_Basics/README.md)
+  - [Read: **CSS Basics**](resources/CSS_Basics/index.md)
   - [Read: **Publishing your website**](resources/Publishing_your_website/README.md)
 
 ### Summary
@@ -451,7 +459,7 @@ Apart from creating HTML content and styling it with CSS, you also have some ins
 
   - How to install the **Live Server** VSCode extension and develop using a local web server
 
-  - [Read: **What is JavaScript?**](resources/What%20is%20JavaScript/README.md)
+  - [Read: **What is JavaScript?**](resources/What_is_JavaScript/index.md)
 
   - [Watch: **JavaScript Tutorial for Beginners: Quick Start**](https://www.youtube.com/watch?v=SajRjc9KKUE){:target="_blank"}
     - Duration: 8min
