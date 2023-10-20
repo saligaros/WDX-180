@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>HTML5 controls: Task 2</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <ul>
+        <li>
+          <label for="max-invite">Select maximum number of invitations</label>
+          <input type="range" id="max-invite" name="max-invitations" min="1" max="30" step="1" value="10">
+          <output class="invite-output" for="max-invite"></output>
+        </li>
+        <li>
+          <button>Submit</button>
+        </li>
+      </ul>
+    </form>
+    <script>
+      
+      const invite = document.querySelector('#max-invite');
+      const output = document.querySelector('.invite-output');
+
+      output.textContent = invite.value;
+
+      invite.addEventListener('input', function() {
+        output.textContent = invite.value;
+      });
+    </script>
+  </body>
+
+</html>
