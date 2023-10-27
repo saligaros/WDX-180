@@ -4,12 +4,14 @@ title: Week 04 | CSS 2 & Performance
 
 # Week 04 | CSS 2 & Performance
 
-_(Updated: 24/10/2023)_
+_(Updated: 26/10/2023)_
 
 ---
+
 > **Important**
-> As you'll notice, after finishing a MDN article it has a suggestion on what to study next.
+> As you'll notice, after finishing an MDN article, there are suggestions on what to study next.
 > We strongly advise you to ignore this part and follow our curriculum's flow that you'll find on this document.
+
 ---
 
 <!-- Week 04 - Day 1 | Styling Tables, Debugging and Organizing CSS -->
@@ -26,8 +28,10 @@ _(Updated: 24/10/2023)_
 
   - [Read: **Styling tables**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables){:target="_blank"}
     - Level: Beginner
+
   - [Read: **Debugging CSS**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS){:target="_blank"}
     - Level: Beginner
+
   - [Read: **Organizing your CSS**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing){:target="_blank"}
     - Level: Beginner
 
@@ -36,6 +40,7 @@ _(Updated: 24/10/2023)_
 ### Exercises
 
   - [MDN's Assessment: **Test your skills: Tables**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Tables_tasks){:target="_blank"}
+
   - [MDN's Assessment: **Fundamental CSS comprehension**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension){:target="_blank"}
 
   Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d01.csv**
@@ -46,6 +51,7 @@ _(Updated: 24/10/2023)_
 ### Extra Resources
 
   - [MDN's Assessment: **Creating fancy letterheaded paper**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper){:target="_blank"}
+
   - [MDN's Assessment: **A cool-looking box**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box){:target="_blank"}
 
 <!-- Sources and Attributions -->
@@ -68,10 +74,13 @@ _(Updated: 24/10/2023)_
 
   - [Read : **Fundamental text and font styling**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals){:target="_blank"}
     - Level: Beginner
+
   - [Read : **Styling lists**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_lists){:target="_blank"}
     - Level: Beginner
+
   - [Read : **Styling links**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links){:target="_blank"}
     - Level: Beginner
+
   - [Read : **Web fonts**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts){:target="_blank"}
     - Level: Beginner
 
@@ -106,10 +115,13 @@ _(Updated: 24/10/2023)_
 
   - [Read: **Introduction to CSS layout**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction){:target="_blank"}
     - Level: Beginner
+
   - [Read: **Normal Flow**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow){:target="_blank"}
     - Level: Beginner
+
   - [Read: **Positioning**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning){:target="_blank"}
     - Level: Beginner
+
   - [Read: **Flexbox**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox){:target="_blank"}
     - Level: Beginner
 
@@ -122,13 +134,11 @@ _(Updated: 24/10/2023)_
   - [Play: **Flexbox Defense**](http://flexboxdefense.com/){:target="_blank"}
     - Tower Defense with a twist: all towers must be positioned with CSS Flexbox.
     - Level: Beginner
-    - You can either record your progress through the game with <INSERT_TOOL_HERE> or post proof images that you reached the final page and have completed the all levels.
 
   - [Play: **Flexbox Froggy**](https://flexboxfroggy.com/){:target="_blank"}
     - A game for learning CSS flexbox called Flexbox Froggy. The goal of the game is to help the frogs get to their lily pads by writing CSS code. See if you can beat all the levels!
     - Level: Beginner, Intermediate, Expert (check settings at the bottom of the page)
     - Lots of languages available, but we suggest playing it in English.
-    - You can either record your progress through the game with <INSERT_TOOL_HERE> or post proof images that you reached the final page and have completed the all levels.
 
   - [MDN's Assessment: **Test your skills: Flexbox**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox_skills){:target="_blank"}
 
@@ -162,10 +172,13 @@ _(Updated: 24/10/2023)_
 
   - [Read: **Responsive Design**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design){:target="_blank"}
     - Level: Beginner
+
   - [Read: **Beginner's guide to media queries**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries){:target="_blank"}
     - Level: Beginner
+
   - [Read: **Legacy layout methods**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods){:target="_blank"}
     - Level: Beginner
+
   - [Read: **Supporting older browsers**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers){:target="_blank"}
     - Level: Beginner
 
@@ -174,8 +187,6 @@ _(Updated: 24/10/2023)_
 ### Exercises
 
   - [MDN's Assessment: **Test your skills: Responsive web design and media queries**](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/rwd_skills){:target="_blank"}
-
-  Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheets are found in the `/user/weekXX/progress` folder, for example `user/week01/progress/progress.draft.w01.d01.csv`. You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
 
   Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d04.csv**
 
@@ -204,17 +215,38 @@ _(Updated: 24/10/2023)_
 
   - [Read: **The "why" of web performance**](https://developer.mozilla.org/en-US/docs/Learn/Performance/why_web_performance){:target="_blank"}
     - Level: Beginner
+
   - [Read: **What is web performance?**](https://developer.mozilla.org/en-US/docs/Learn/Performance/What_is_web_performance){:target="_blank"}
     - Level: Beginner
+
   - [Read: **Perceived performance**](https://developer.mozilla.org/en-US/docs/Learn/Performance/Perceived_performance){:target="_blank"}
     - Level: Beginner
+
   - [Watch: **CSS Preprocessors**](https://www.youtube.com/watch?v=PJkWbezpHpE)
     - **Description:** In this video we look at the wonderful world of CSS Preprocessors and a few of the awesome things that you can do with CSS Preprocessors, and look at a few of the more popular ones; LESS, Sass (SCSS), and Stylus.
     - **Duration:** 12min
 
 <!-- Summary -->
 
-<!-- Exercises -->
+### Exercises
+
+  There a lot of tools that can help a web developer check how good the performance of a website is. One of the best out there, and open source, is **Google Lighthouse**. Check the video below that covers the absolute basics of this simple but helpful tool
+
+  [Watch: **What Is Google Lighthouse and How to Use It?**](https://www.youtube.com/watch?v=VyaHwvPWuZU){:target="_blank"}
+
+  After watching the video, it's time to give it a go by following these steps:
+
+  <!-- TODO: Replace week01 + exercises-3 with dynamic links. There should be no references to particular Weeks or Days inside the Modules content -->
+
+
+  - Head over to your GitHub Page where your solution from [this exercise](/curriculum/week01/index.md#exercises-3) is published.
+    - If you have not completed this exercise, now it's time to do so!
+    <!-- TODO: Same as above. Replace references to weeks and days. -->
+    - If you followed correctly the instructions provided you can find your solution following this link `https://<GITHUB_USERNAME>.github.io/WDX-180/user/week01/exercises/day04/cern/index.html` by replacing `<GITHUB_USERNAME>` with your username.
+  - While on this page, open Lighthouse, in any way you prefer (we're suggesting using the Chrome Dev Tools), and initiate a report for `Desktop` device by checking the following categories: `Performance`, `Accessibility`, `Best Practices`, `SEO`.
+  - After the report is finished, check thoroughly what changes can be made to increase the score in any of the 4 categories, and try to improve your site's performance as much as possible!
+
+  The goal is to have a score on all categories over 90. **Let's start analyzing this webpage**!
 
   Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week04/progress/progress.draft.w04.d05.csv**
 
