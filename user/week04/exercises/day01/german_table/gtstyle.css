@@ -1,0 +1,37 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+   width: 70%;
+  }
+
+  th, td {
+    padding: 5px;
+  }
+
+  thead {
+    text-align: left;
+    background-color: #55A2BB;
+    color: #B9E6EE;
+    font-style: normal; 
+    border-bottom: 3px solid black;
+  }
+
+  tbody td:nth-child(1) {
+    background-color: #55A2BB;
+    color: white;
+  }
+
+  #red {
+    color: red;
+  }
+
+  .gray {
+    background-color: #D8D8D5;
+  }
+  

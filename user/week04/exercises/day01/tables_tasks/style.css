@@ -1,0 +1,53 @@
+body {
+    border: 1px solid #999;
+}
+
+table {
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+tfoot  {
+    border-top: 1px solid #999;
+}
+
+th, td {
+    padding: 0.3em;
+    text-align: top;
+}
+
+thead th:nth-child(2) {
+text-align:right;
+}
+
+thead th:nth-child(3) {
+    text-align:right;
+    }
+
+tbody td:nth-child(2) {
+    text-align: right;
+}
+
+tbody td:nth-child(3) {
+    text-align: right;
+}
+
+thead th:nth-child(1) {
+    text-align: left;
+}
+
+thead th:nth-child(4) {
+    text-align: left;
+}
+
+tbody th:nth-child(1) {
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+table {
+    padding: 0px;
+}
+
