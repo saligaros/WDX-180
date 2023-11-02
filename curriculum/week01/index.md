@@ -131,6 +131,8 @@ We encourage you to **help and support each other** but in a constructive and he
 
 </details>
 
+<hr class="mt-1">
+
 <!-- Week 1 - Day 2 | How the Internet & the World Wide Web works -->
 <details markdown="1">
   <summary><h2>Week 1 - Day 2 | How the Internet & the WWW works</h2></summary>
@@ -287,6 +289,8 @@ We encourage you to **help and support each other** but in a constructive and he
 
 </details>
 
+<hr class="mt-1">
+
 <!-- Week 1 - Day 3 | HTML & Markdown -->
 <details markdown="1">
   <summary><h2>Week 1 - Day 3 | HTML & Markdown</h2></summary>
@@ -397,6 +401,8 @@ We encourage you to **help and support each other** but in a constructive and he
     - [Getting started with the web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)
 </details>
 
+<hr class="mt-1">
+
 <!-- Week 1 - Day 4 | CSS -->
 <details markdown="1">
   <summary><h2>Week 1 - Day 4 | CSS</h2></summary>
@@ -441,6 +447,8 @@ Apart from creating HTML content and styling it with CSS, you also have some ins
 
 </details>
 
+<hr class="mt-1">
+
 <!-- Week 1 - Day 5 | JavaScript -->
 <details markdown="1">
   <summary><h2>Week 1 - Day 5 | JavaScript</h2></summary>
@@ -454,6 +462,8 @@ Apart from creating HTML content and styling it with CSS, you also have some ins
 ### Study Plan
 
   This is one of the toughest modules on the curriculum, so make sure to arm yourself with plenty of coffee and concentration!
+
+  Don't worry if this feels overwhelming and probably too much for a single day. It is intended to be so. Just go through the material, pick up as many concepts as you can, try things out and get a first taste of one of the most popular programming languages in the world. You'll have plenty of time later on during this course to learn all about this language.
 
   **What you'll learn:**
 
@@ -851,6 +861,8 @@ Apart from creating HTML content and styling it with CSS, you also have some ins
 
   - [How to read complex code - Felienne Hermans](https://www.youtube.com/watch?v=GUtfW7SHMc4) 
 </details>
+
+<hr class="mt-1">
 
 **Weekly feedback:** Hey, it's really important for us to know how your experience with the course has been so far, so don't forget to fill in and submit your [**mandatory** feedback form](https://forms.gle/S6Zg3bbS2uuwsSZF9) before the day ends. Thanks you! 
 

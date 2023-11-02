@@ -23,7 +23,9 @@ const {
 } = require("./utils");
 const wdxTemplateRegexes = {
 
+  // TODO: weekRegex will be replaced by weekFullRegex and weekNumRegex
   weekRegex:          /\{\{\s?WDX:\s?WEEK\s?\}\}/gi,
+  weekFullRegex:      /\{\{\s?WDX:\s?WEEK_FULL\s?\}\}/gi,
   titleRegex:         /\{\{\s?WDX:\s?TITLE\s?\}\}/gi,
   dayRegex:           /\{\{\s?WDX:\s?DAY\s?\}\}/gi,
   scheduleRegex:      /\{\{\s?WDX:\s?DAILY_SCHEDULE\s?\}\}/gi,
@@ -172,6 +174,7 @@ function getInclude({ file, day, numOfWeek }){
   const {
 
     weekRegex,
+    weekFullRegex,
     dayRegex
 
   } = wdxTemplateRegexes;
@@ -183,6 +186,7 @@ function getInclude({ file, day, numOfWeek }){
     const contents = fs.readFileSync(includeFile, "utf-8");
     return contents
     .replace(weekRegex,String(numOfWeek).padStart(2,"0"))
+    .replace(weekFullRegex, `Week ${numOfWeek}`)
     .replace(dayRegex, String(day).padStart(2,"0"));
 
   } catch(e) {
@@ -250,6 +254,10 @@ function copyModuleMediaAssets({ weeklyData, title }){
 
   weeklyData.forEach( dailyData =>{
 
+    if ( !dailyData ){
+      return false;
+    }
+
     const mediaEntries = dailyData.media;
 
     if ( mediaEntries ){
@@ -309,7 +317,7 @@ function generateWeeklyProgressSheetFromWeeklyData({ weeklyData, title }){
 
     let dailyCSV = csvHeaders;
 
-    if ( !dailyData.progress ){
+    if ( !dailyData || !dailyData.progress ){
       return false;
     }
 
@@ -341,7 +349,11 @@ function generateWeeklyProgressSheetFromWeeklyData({ weeklyData, title }){
             } 
             break;
         }
-        dailyCSV += `\n${upPaddedWeek},${day},${title},${extras ? "EXTRAS: " + task : task},${level},0-10,FALSE,${instructions}`;
+
+        const weeklyTitle = title;
+        const dailyTitle  = dailyData.title;
+
+        dailyCSV += `\n${upPaddedWeek},${day},${weeklyTitle}: ${dailyTitle},${extras ? "EXTRAS: " + task : task},${level},0-10,FALSE,${instructions}`;
 
       })
 
@@ -395,7 +407,7 @@ function generateWeeklyTestsFromWeeklyData({ weeklyData, title }){
 
   weeklyData.forEach(dailyData =>{
   
-    if ( !dailyData.tests ){
+    if ( !dailyData || !dailyData.tests ){
       return false;
     }
 
@@ -574,6 +586,12 @@ function parseTokenForMediaAssets( token ){
 
   const hrefs = [];
 
+  if ( token.type === "list" && token.items ){
+    token.items.forEach( item =>{
+      // console.log( item );
+    })
+  }
+
   if ( token.type === "paragraph" ){
 
     token.tokens.forEach( t =>{
@@ -590,7 +608,7 @@ function parseTokenForMediaAssets( token ){
       if ( isLink && hasImageToken ){
         hrefs.push(t.tokens[0].href);
       }
-  
+
     });
 
   }
@@ -724,6 +742,11 @@ function parseDailyContent({ entry, dailyMarkdownTokens, numOfWeek }){
 
   let dailyContent = "";
 
+  const msg = `Parsing "${fm.title}" sections:`;
+  const msgUnderline = Array.from({ length: msg.length }, _=> "=").join("");
+  ok( msg );
+  ok( msgUnderline );
+
   // Go through the Markdown and replace all {{ WDX }} with content:
   dailyMarkdownTokens.forEach((token,idx,tokens) =>{
     
@@ -793,6 +816,7 @@ function parseDailyContent({ entry, dailyMarkdownTokens, numOfWeek }){
   const hasDailyMediaAssets = dailyMediaAssets.entries.size > 0;
 
   return { 
+    title: fm.title,
     content: dailyContent, 
     progress: dailyProgressObject, 
     tests: dailyTestsObject,
