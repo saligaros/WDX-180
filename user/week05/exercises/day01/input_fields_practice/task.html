@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice with Form Input fields</title>
+    <style>
+        :root {
+            --black: #282828;
+            --white: #d0d0d0;
+            --fontStyle: "Arial, Helvetica, sans-serif";
+            --backgroundColor: #282828;
+            --inputTextColor: #d0d0d0;
+            --placeholderColor: #767676;
+            --borderColor: #4c4c4c;
+            --borderColorHover: #8f8f8f;
+            --borderColorFocus: #7c9bdb;
+            --borderColorError: #862e2a;
+        }
+
+        body {
+            font-family: var(--fontStyle, "sans-serif");
+            background-color: var(--backgroundColor);
+        }
+
+        span {
+            color: var(--white)
+        }
+
+        input:hover {
+            border: px solid var(--borderColorHover);
+        }
+
+        input:focus {
+            border: px solid var(--borderColorFocus)
+        }
+
+        label {
+            color: var(--white)
+        }
+
+        input:invalid {
+            border: 2px solid var(--borderColorError);            
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <p class="input-container">
+                <label for="message">Enter your message</label>
+                <br><br>
+                <input name="message" id="message" placeholder="Placeholder text here"
+                    required pattern="[A-Za-z0-9!@_-$() ]*" maxlength="30" />
+                <span>0/30 characters</span>
+            </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>
