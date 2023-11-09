@@ -70,6 +70,8 @@ title: Intro to Arrays
   console.log(courses);
   ```
 
+  <a href="#flems-enable" class="flems-button">&#9658; Live coding</a>
+
   The first thing we do is add an element to the end using the push function that arrays have. It "pushes" the element on the end.
 
   Below that, we're overriding index 2 with a new course. This will throw away what was there before and set it to be what we've set it to be.
@@ -95,6 +97,8 @@ title: Intro to Arrays
     console.log(city);
   });
   ```
+
+  <a href="#flems-enable" class="flems-button">&#9658; Live coding</a>
 
   The first way, using a for loop, is using that `i` control variable which gets incremented each loop. We use that `i` to access each item in the array on each iteration of the loop. We have the loop to stop when `i` gets equal to the `length` of cities. Very useful pattern. You'll see it a lot.
 
@@ -127,6 +131,12 @@ title: Intro to Arrays
   <!-- WDX:META:PROGRESS:task=Complete the exercise 'Properties and Methods of JavaScript Arrays'|user_folder=task_4 -->
   <!-- WDX:META:TESTS:name=Test Exercise: 'Properties and Methods of JavaScript Arrays'|type=exist|user_folder=task_4|files=properties-and-methods-of-arrays.js,properties-and-methods-of-arrays.html -->
   In this task, we want you to load the [properties-and-methods-of-arrays.js](./exercises/properties-and-methods-of-arrays.js){:target="_blank"} from an HTML named `properties-and-methods-of-arrays.html` and complete the challenges found inside.
+
+#### Task 5: Test your skills: JavaScript Arrays
+
+  <!-- WDX:META:PROGRESS:task=Complete the exercise 'Test your skills: JavaScript Arrays'|user_folder=task_5 -->
+  <!-- WDX:META:TESTS:name=Test Exercise: 'Test your skills: JavaScript Arrays'|type=exist|user_folder=task_5|files=arrays-skills.js,arrays-skills.html -->
+  In this task, we want you to load the [arrays-skills.js](./exercises/arrays-skills.js){:target="_blank"} from an HTML named `arrays-skills.html` and complete the challenges found inside.
 
 ### Extra Resources
 
