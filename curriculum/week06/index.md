@@ -1,20 +1,649 @@
 ---
 title: Week 06 | JavaScript Core 1
+load_script_js_via_src:
+  - flems/flems.html
+  - flems/flems_init.js
 ---
 
 <h1 id="{{ Week 06-JavaScript Core 1 | slugify }}">
   <span class="week-prefix">Week 06 |</span> JavaScript Core 1
 </h1>
 
-_(Updated: 6/11/2023)_
+_(Updated: 9/11/2023)_
 
 ---
 
-<!-- Week 06 - Day 1 | Introduction to JavaScript -->
+<!-- Week 06 - Day 1 | What is Programming? -->
 <details markdown="1">
   <summary>
     <h2>
-      <span class="summary-day">Week 06 - Day 1</span> | Introduction to JavaScript</h2>
+      <span class="summary-day">Week 06 - Day 1</span> | What is Programming?</h2>
+  </summary>
+
+### Schedule
+
+  - [Study](#study-plan-NN)
+  - [Exercises](#exercises-NN)
+  - [Extra Resources](#extra-resources-NN)
+
+### Study Plan
+
+#### What is Programming?
+
+
+
+  Programming is communication. It's also a lot of other things, but this
+  introduction will focus on the different ways you communicate with your code.
+
+  When you write code you are really just writing a text document, exactly like
+  you might write an email or a note. The biggest difference between an email and a computer program is _who you are writing for_.
+
+  When you write an email you're writing for the person who will be reading it.
+  When you write a computer program you are writing for 3 very different audiences at the same time! One single document (your code) needs to be understandable to:
+
+  - **Developers**: A developer needs to read your code and understand what you
+    were trying to do and why.
+  - **Computers**: Your code needs to have _perfect_ syntax so the computer can
+    parse it, and you must write instructions that are allowed by the programming language or the computer will throw an error.
+  - **Users**: The instructions you give to the computer must create an intuitive and pleasant experience for the user.
+
+  Being a developer means understanding how all these characters interact, and
+  then communicating with everyone involved to deliver quality software within
+  your project's constraints. This diagram shows the different channels of
+  communication in a software project:
+
+  ![rhetorical situation](./assets/the-big-picture.png)
+
+  ---
+
+
+
+  **Programming Languages**
+
+  High-level programming languages like JavaScript are a compromise between how
+  people think and how a computer works. Programming languages are not always easy for people to learn but they're definitely easier than directly telling a
+  computer what to do (writing 1's and 0's).
+
+  Because humans are so much better at learning and understanding than computers
+  are (for now), programming languages have been designed to leave all the hard
+  work for us. It's our job to make sure our instructions for the computer are
+  perfectly structured and do exactly what we want. The computer just _parses_
+  (interprets) our code and follows the instructions without any understanding or thinking.
+
+  You can think of a programming language as the developer's UI for the computer.
+  Because this UI isn't very intuitive you will need to spend a lot of time
+  studying syntax and other details before you can program with ease. This is why you will be focusing on _understanding_ programs before writing them.
+
+  [**_Learnable Programming_**](http://worrydream.com/LearnableProgramming/){:target="_blank"} said it best:
+
+  > - **Programming is a way of thinking, not a rote skill**. Learning about "for"
+  >   loops is not learning to program, any more than learning about pencils is
+  >   learning to draw.
+  > - **People understand what they can see**. If a programmer cannot see what a
+  >   program is doing, she can't understand it.
+  >
+  > Thus, the goals of a programming system should be:
+  >
+  > - to support and encourage powerful ways of thinking
+  > - to enable programmers to see and understand the execution of their programs
+  >
+  > ...
+  >
+  > _How do we get people to understand programming?_
+  >
+  > We change programming. We turn it into something that's understandable by
+  > people.
+
+
+
+  Until the future when computers are designed to understand us, we're stuck with programming systems where we do the hard work of understanding computers. 
+
+  Hopefully these Modules can make this journey easier.
+
+  ---
+
+
+
+#### JavaScript
+
+
+
+  JavaScript is the only programming language supported by web browsers, this
+  makes is a very common language. Every website that needs interactivity uses
+  JavaScript alongside HTML & CSS. Because people across the world with all levels
+  of programming experience are writing web pages, JavaScript has become something
+  like the English of programming languages:
+
+  - It's everywhere, most developers will know at least a little bit of
+    JavaScript.
+  - It's a messy and complicated language, full of exceptions and concepts
+    borrowed from other languages.
+  - It's easy enough to get started with the basics, and without too much
+    experience you can already get your ideas across.
+
+  So why learn JavaScript? Because it's quick to get started, you can do a lot
+  with it, and there's lots of work for a good JavaScript developer.
+
+  **Running JavaScript**
+
+  There are many ways you can run JavaScript, for now you should know about these
+  options:
+
+  ---
+
+
+
+  **1. Writing directly in the console**
+
+  > This is closest to how you will be studying JS in this module.
+
+
+
+  Writing JS in your browser's console is the simplest and quickest way to run
+  some JavaScript, but is limited. It's perfect for doing little experiments to
+  see how something works, but it's not possible to write and save a full program.
+
+  <details>
+  <summary>Try copy-pasting this code into your browser's console and pressing "enter"</summary>
+  <br>
+
+
+
+  ```js
+  /* --- for the computer --- */
+  'use strict';
+
+  /* --- for the developer --- */
+
+  // log to the console for developers to read
+  console.log('hello developer (console)');
+
+  /* --- for the user --- */
+
+  // alert hello for the user
+  //  not a great UX, but easy to program
+  //  you'll use this for now
+  alert('hello user (alert)');
+  ```
+
+  </details>
+
+
+
+  ---
+
+
+
+  **2. Writing directly in an HTML file**
+
+  You can also write your code in a script tag of an HTML file then open the HTML
+  file in your browser. The JavaScript will run automatically when the page is
+  loaded. See this in action with [`./assets/1-inline-script-tag.html`](./assets/1-inline-script-tag.html).
+
+  <!-- TODO: The ./assets above pointing to a folder containing code, should be managed in some way, e.g. redirect to GitHub or local repo, display them inline or through a viewer (Flems/Codesandbox/other)  -->
+
+
+
+  You will learn about this later in the course for examples and exercises that
+  introduce how JavaScript interacts with the DOM. It's easier to understand "the
+  big picture" when you can see everything in one document.
+
+  ---
+
+
+
+  **3. Loading JS files into HTML**
+
+  You can also write your code in a separate `.js` file, then load the file into
+  your HTML to execute the code. There are two different ways you can load a `.js`
+  file into your HTML, you can see them in action with [`./assets/2-separate-script-file/index.html`](./assets/2-separate-script-file/index.html) and
+  [`./assets/3-separate-module-files/index.html`](./assets/3-separate-module-files/index.html) (you'll learn more about scripts vs. modules later on).
+  <!-- TODO: Same as above... -->
+
+  <!-- TODO: INTEGRATE: https://stackoverflow.com/a/53821485/4861760 -->
+
+
+
+  You will use this for larger projects and for collaboration. Separating code
+  into smaller files each with a clear purpose makes your code base easier to
+  understand, debug, and to divide into group tasks.
+
+  ---
+
+
+
+  **4. Specialized Browser Environments**
+
+  There are also many specialized environments for writing and running JavaScript
+  in a browser, each one has a specific use case:
+
+  <!-- TODO: ADD LINK to online study-lenses or local npm script -->
+
+
+  - **Study Lenses**: This is an environment specialized for studying JavaScript
+    locally with your text editor and a browser. It has features for understanding
+    different aspects of code and for visualizing what happens during execution.
+    The "run" and "debug" buttons in Study Lenses execute your code directly in
+    the browser just like if you loaded a script into an HTML file. This will help
+    you learn your browser's DevTools and help you eventually transition away from
+    the learning environment and towards professional devtools. (_the material in
+    this repo is written for Study Lenses_)
+
+  - **Online IDEs**: There are many online IDEs (Integrated Development
+    Environments) designed for easy setup, collaboration, and sharing. Online IDEs
+    try to match the developer experience of working on your local machine, but
+    online. These are easy to use, but they're not beginner toys! You can use
+    these to develop full projects with a wide variety of programming languages,
+    libraries and frameworks. Some popular ones are [Repl.it](https://repl.it/){:target="_blank"},
+    [CodeSandbox](https://codesandbox.io/){:target="_blank"},
+    [Codespaces](https://github.com/features/codespaces){:target="_blank"} or
+    [Glitch](https://glitch.com/){:target="_blank"}.
+
+  - **Online Learning Environments**: There are also many online programming
+    environments online designed for beginners that simplify the developer
+    experience and allow you to focus on learning the basics without getting
+    distracted by advanced features. Many of these come with built-in graphics
+    libraries or support for game development. These include
+    [code.org](https://code.org/){:target="_blank"} (develop and play games with JS),
+    [editor.p5js.org](https://editor.p5js.org/){:target="_blank"} (create interactive artwork),
+    [PencilCode](https://pencilcode.net/edit/myprogram){:target="_blank"} (write your code as blocks
+    or text), [Ocelot](https://code.ocelot-ide.org/){:target="_blank"} (disallows "bad" language
+    features and has helpful error messages).
+
+  ---
+
+
+
+  **5. Beyond the Browser**
+
+  You can also use JavaScript outside of the browser to create web servers,
+  develop mobile apps, program a
+  [Raspberry Pi](https://www.w3schools.com/nodejs/nodejs_raspberrypi.asp){:target="_blank"}, program
+  IOT (Internet of Things) Devices, and much more.
+
+  [Node.js](https://nodejs.org/) is the most popular non-browser runtime for
+  JavaScript. [Deno](https://deno.land/){:target="_blank"} is a newer runtime developed as a more
+  secure and developer-friendly alternative to Node.js.
+
+  ---
+
+
+
+  **References**
+
+  - [javascript.info/intro](https://javascript.info/intro){:target="_blank"}
+  - [The Net Ninja](https://www.youtube.com/watch?v=VB7y0yxZjro){:target="_blank"}
+  - [MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript){:target="_blank"}
+  - [Andrew Mosh](https://www.youtube.com/watch?v=W6NZfCO5SIk){:target="_blank"} \(first 5 minutes\)
+  - [Code School](https://www.youtube.com/watch?v=nItSSTwBvSU){:target="_blank"}
+  - [MDN: First Steps](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript){:target="_blank"}
+  - [javascript.info](https://javascript.info/intro){:target="_blank"}
+  - [Danielle Thé](https://www.youtube.com/watch?v=gT0Lh1eYk78){:target="_blank"}
+
+  ---
+
+
+
+  **Programs: Source Code**
+
+  JavaScript is the language used to write the Source Code in this diagram:
+
+  [![program diagram](./assets/a-program.png)](https://excalidraw.com/#json=_cj6JYwuO38PPGKxXN_cQ,3910Z7e2jGLZu4vjueG-Bg)
+
+#### Some History
+
+
+
+  JavaScript has an interesting history, it was originally created in 1 week
+  during 1995 by Brendan Eich and since then has gone through many many changes.
+
+  At first it was just a small language used for small interactions in web pages.
+  Over the years as the internet has grown and browsers have become more powerful,
+  JavaScript has evolved from a small language for small interactions to a huge
+  programming language capable of building complex applications.
+
+  As JavaScript grew, so did the number of developers who use it. All these
+  developers pushed the limits of JavaScript, created new tooling, different
+  conventions, and generally made the JS ecosystem a fascinating (and
+  frustrating!) place to work. This human history of JavaScript is what makes it
+  so interesting.
+
+  - [simplilearn](https://www.youtube.com/watch?v=6ENWOVc-64c){:target="_blank"}
+  - [wierd history of js](https://dev.to/codediodeio/the-weird-history-of-javascript-2bnb){:target="_blank"}
+  - [from Brendan Eich himself](https://www.youtube.com/watch?v=3-9fnjzmXWA){:target="_blank"}
+  - [springboard](https://www.springboard.com/blog/data-science/history-of-javascript/){:target="_blank"}
+
+  **Backwards Compatibility**
+
+  > or "don’t break the internet!”
+
+
+
+  An important concept for understanding the JavaScript language is "**Backwards
+  Compatibility**". Backwards Compatibility means that any program ever written in
+  JavaScript must _always_ work!
+
+  Any time something is added to JavaScript or the language is changed in any way,
+  older programs must still be valid JavaScript. This is important because people
+  have been websites for decades now. It would be bad if one day every website
+  written before 2003 no longer worked because of a recent change in JavaScript.
+
+  Imagine if every word, sentence, and grammar in your native language's history
+  needed to be understood by every native speaker for the rest of eternity! You
+  would need to be just as comfortable reading a story written 4000 years ago as
+  one written yesterday. This would make it very hard for languages to change and
+  grow, but this is the case for JavaScript.
+
+  - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/ch1.md#backwards--forwards){:target="_blank"}
+  - [Why is JavaScript backwards compatible to a fault?](https://stackoverflow.com/questions/4937245/why-is-javascript-backwards-compatible-to-a-fault){:target="_blank"}
+  - [edytawrobel](https://www.edytawrobel.com/js-compatibility/){:target="_blank"}
+  - [tonsky.me](https://tonsky.me/blog/compatibility/){:target="_blank"}
+  - [rohitdhatrak](https://www.rohitdhatrak.com/backwards-forwards-compatibility/){:target="_blank"}
+  - [Chrome Breaks the Web](https://www.theregister.com/2021/10/04/chrome_breaks_web/){:target="_blank"}
+
+  **ES6rohitdhatrak**
+
+  ES6 was a new version of JavaScript released in 2015, it contained major changes
+  to the language that improved the developer experience. ES6 marked such a large
+  change in JavaScript that it's fair to talk about the JS world before ES6 and
+  after ES6 as different eras.
+
+  You can learn more about ES6 another time, for now you just need to know it was
+  such a big improvement that it belongs in every history of JS.
+
+  **The Future of JavaScript**
+
+  All new features for the JavaScript language are presented and discussed in the
+  [tc39 github organization](https://github.com/tc39){:target="_blank"}. If you're curious looking
+  through the [proposals repository](https://github.com/tc39/proposals){:target="_blank"} can be
+  interesting to see how people plan and discuss additions to the JS language.
+
+#### Developers
+
+
+
+  Developers are the ones designing the software, writing the code, and fixing the
+  bugs. As a developer you'll spend lots of time reading source code. So it's very
+  important to make sure your code is easy to understand.
+
+  You should think first of other developers who will need to understand your
+  program, and second of yourself. Why is this more productive? First because
+  working on a team is easier when everyone is looking out for each other. Second
+  because one day you'll be someone else! After even half an hour your thoughts
+  about a program are no longer fresh, you'll need to rely on what you wrote to
+  figure out the details of your own program.
+
+  ---
+
+
+
+  **Programs: Developers**
+
+  Users and on the left in this diagram, developers are on the right.
+
+  - **For Developers**
+    - **Static**: Comments, variable names and code formatting help developers
+      read and understand source code.
+    - **Dynamic**: Logs and error messages help developers understand what is
+      happening inside the computer as it follows the code's instructions.
+  <!-- TODO: Maybe this has to be removed. -->
+  [![program diagram](./assets/a-program.png)](https://excalidraw.com/#json=40qMI89WByj9Yhhh94Ghg,4zpL-AmDgpnbyFJWJfNQhg)
+
+#### The Computer
+
+
+
+  You've been the user of many websites, you've even developed a few with HTML &
+  CSS, but you haven't had to _be the computer_ yet. With HTML & CSS it's enough
+  to learn what goes in and what comes out, you don't need to know what happens in
+  between:
+
+  - HTML/CSS goes into a browser -> ... ? ... -> a website is displayed
+
+  With JavaScript it's the complete opposite. What the program _does_ (inputs ->
+  outputs) is less important than _how it happens_. Your goal now isn't to amaze
+  the user, it's to become the computer and understand what happens between the
+  input and the output:
+
+  - source code -> **a lot of important steps** -> final output
+
+  **Computer Empathy**
+
+  A program is just a series of instructions. If you follow the instructions
+  _exactly_ like the computer would, you are actually running the program by hand!
+  (just a lot slower.) There is no difference in theory between you following the
+  code's instructions and a computer following the same instructions.
+
+  So when you practice tracing think of it as building your _computer empathy_:
+  understanding what it's like to be the computer as it runs your program. If the
+  first rule in design is "know your user", then one of the first rule in coding
+  should be "know your computer". After all, the computer is one of your code's
+  users!
+
+  **Predict, not Explain**
+
+  So what does it mean to "know JavaScript"? How do you know when you've
+  understood some code? When you can **predict** _exactly_ what will happen at
+  each step of execution!
+
+  Explaining a program in plain english is helpful but it's easy to be a little
+  bit wrong and not know it. When you focus on _predicting_ what happens at each
+  step and you check your predictions with a trace or JS Tutor, then you really
+  know if you understood.
+
+  This approach is also helpful because not only will you know if you're right,
+  but if you're wrong the computer will tell you the right answer! Then you know
+  exactly which line you didn't understand, and you know what to study next.
+
+  ---
+
+
+
+  **Programs: The Computer**
+
+  The computer is in the center of this diagram. It interpreting the developers
+  source code, processing the user's data, and logging information for the
+  developer.
+
+  Tracing code is a very good way to begin understanding how the computer follows
+  your instructions one step at a time:
+  <!-- TODO: Maybe this has to be removed. -->
+  [![program diagram](./assets/a-program.png)](https://excalidraw.com/#json=_cj6JYwuO38PPGKxXN_cQ,3910Z7e2jGLZu4vjueG-Bg)
+
+#### Users
+
+
+
+  Users will use your running programs, but will never see your source code. When
+  writing for a user you need to think of their needs and their experience using
+  your program.
+
+  For now the user experience of your programs will be limited to pop-up boxes,
+  but that doesn't mean you can't think of UX (User Experience). A user always
+  appreciates  clear instructions, helpful feedback and a friendly tone in your
+  messages.
+
+  How does thinking of a user help you write code that they will never see? It's
+  about keeping the big picture in mind and making priorities. It's easy to get
+  caught up in the details of your code, taking a step back to remember who you're
+  developing for and why they need this program keeps your priorities in
+  perspective.
+
+  ---
+
+
+
+  **Programs: Users**
+
+  Users and on the left in this diagram, developers are on the right.
+
+  - **For Users**
+    - **Inputting Data**: `prompt` is a simple way for users to input data to a
+      JavaScript program.
+    - **Outputting Data**: `alert` is a simple way for the computer to display
+      data to a user.
+  <!-- TODO: Maybe this has to be removed. -->
+  [![program diagram](./assets/a-program.png)](https://excalidraw.com/#json=40qMI89WByj9Yhhh94Ghg,4zpL-AmDgpnbyFJWJfNQhg)
+
+#### Data In, Data Out: I/O
+
+
+
+  So what is a program? It's something like this:
+
+  ![program diagram](./assets/a-program.png)
+
+  The basic job of a computer program is to process data. Even the most beautiful
+  and interactive programs are just processing data behind the scenes. One of the
+  biggest tricks to programming is figuring out how to _model_ your problem using
+  data so computer can help you solve the problem.
+
+  The programs you'll be studying in this module are focused on processing _text
+  data_ ("strings" in JavaScript). This is a good place to start because you are
+  already used to reading and working with text so it shouldn't be too hard to
+  understand what's happening inside the computer:
+
+  1. The user inputs some text data into a pop-up.
+  2. The program processes the data. (_tracing_!)
+  3. Some new data is displayed to the user in a pop-up.
+
+  Later on you'll learn how to make better user interfaces than just a pop-up, but
+  the main idea will remain the same: The user interface is just a human-friendly
+  way for the user to interact with your program, the actual program is running
+  behind the scenes processing their data and producing new data.
+
+  ---
+
+
+
+  **JavaScript Strings**
+
+  What is data? In the simplest sense, data is just information. This information
+  can be represented or stored in many different ways. JavaScript has several data
+  types, the one that matters most for now are _strings_. Strings are how
+  JavaScript stores and manipulates text:
+
+  ```js
+  'use strict';
+
+  // strings are any text wrapped in quotation marks
+
+  console.log('this is a string');
+
+  // you can check type of some data using `typeof`
+  //  you'll learn a lot more about this later
+  //  for now just know that it's possible
+  console.log(typeof 'hello'); // "string"
+  console.log(typeof 5); // "number"
+  console.log(typeof '5'); // "string
+
+  // you can find the length of a string with `.length`
+  console.log('abc'.length); // 3
+  console.log('ab'.length); // 2
+  console.log('a'.length); // 1
+  console.log(''.length); // 0
+
+  // string concatenation:
+  //  you can combine two strings using concatenation
+  console.log('a' + 'b' + 'c'); // 'abc'
+  ```
+
+  You don't need to understand very much about JavaScript types for now, just that
+  the programs in this folder are all processing _text data_ represented in
+  JavaScript by _strings_.
+
+  ---
+
+
+
+  **Programs to Study**
+
+  A very important skill to learn as a programmer is not being afraid of code you
+  don't understand. There is always _something_ you can understand and there is
+  always a way to understand the rest. You aren't expected understand all the
+  syntax in this folder just yet.
+
+  Instead focus on what you _can_ understand about each program at a higher level,
+  like in the diagram at the top of this README. For all of these examples and
+  exercises try running the program many times inputting different data and seeing
+  what comes out.
+
+  Practice explaining what is happening in each program using these terms:
+
+  - **Program Behavior**: You can answer these questions just by comparing inputs
+    and outputs! You don't need to read a single line of code:
+    - What does the program do?
+    - What happens to the user data, how is it transformed or processed in the
+      program?
+  - **Data In**: What data does the program expect? Try to say this in a normal
+    human sentence.
+  - **Data Out**: What data does the program expect? Try to say this in a normal
+    human sentence.
+  - **Test Cases**: Specific examples of data that goes in and the data that comes
+    out.
+
+  <!-- TODO: Maybe this has to be removed. -->
+
+
+  In the `/examples` folder you will find a few programs with a comment describing
+  the **behavior**, **data in** and **data out**. Your challenge in `/exericses`
+  is to fill in the same information for new programs.
+
+  Be _very careful_ about your formatting! Study the example comments closely and
+  do your best to format yours _exactly_ the same:
+
+  ```js
+  'use strict';
+
+  /* Program Title
+
+    Description of program's behavior.
+
+    Data In:
+      Describe the data that goes in.
+
+    Data Out:
+      Describe the data that comes out.
+
+    Test Cases:
+      'an example input' -> 'the matching output'
+      'another input' -> 'the other output'
+      ...
+
+  */
+
+  // ... the rest of the code
+  ```
+
+<!-- Summary -->
+
+<!-- Exercises -->
+
+<!-- Extra Resources -->
+
+### Sources and Attributions
+
+  - **DeNepo**:
+    - [What is Programming](https://github.com/in-tech-gration/welcome-to-js/tree/main/1-what-is-programming) [(Permalink)](https://github.com/in-tech-gration/welcome-to-js/tree/9239360311e64cb81658105b674c7fdfec97bed8/1-what-is-programming)
+  
+  - [CodeCademy](https://www.codecademy.com/articles/what-is-programming)
+  
+  - [Khan Academy](https://www.khanacademy.org/computing/computer-programming/programming/intro-to-programming/v/programming-intro)
+  
+  - [The Coding Train](https://www.youtube.com/watch?v=AImF__7FyzM)
+  
+  - [Practical Introduction to JS](https://shawnr.gitbooks.io/practical-introduction-to-javascript/content/what-is-programming/)
+
+  
+</details>
+
+<hr class="mt-1">
+
+<!-- Week 06 - Day 2 | Introduction to JavaScript -->
+<details markdown="1">
+  <summary>
+    <h2>
+      <span class="summary-day">Week 06 - Day 2</span> | Introduction to JavaScript</h2>
   </summary>
 
 ### Schedule
@@ -152,7 +781,7 @@ _(Updated: 6/11/2023)_
   }
   ```
 
-  In the above example, the condition inside of the parens is evaluated and if it's true, the first block is run and the second is skipped. If it is false, the second block is run and the first block is skipped. Paste that code into your experiments and play with it. You also do not have to have an else block. Okay, let's go further.
+  In the above example, the condition inside of the parentheses is evaluated and if it's true, the first block is run and the second is skipped. If it is false, the second block is run and the first block is skipped. Paste that code into your experiments and play with it. You also do not have to have an else block. Okay, let's go further.
 
   ```javascript
   // if you see three lines, it's just three = in a row, ===. the font just combines them into one big character
@@ -263,7 +892,7 @@ _(Updated: 6/11/2023)_
 
   [![](./assets/nikkisiapno.for.loop.jpeg)](./assets/nikkisiapno.for.loop.jpeg){:target="_blank"}
 
-  This is a for loop which is likely the most common kind of loop. Inside the parens are three statements and you need all of them. The `let i = 0;` is you defining your control variable that will control the loop. For some reason, people always use `i`, not sure why. It's just that way. It really could be anything. The second statement `i <= 10` is just like the while loop, is that's the statement that as soon as it's false it breaks the loop. The last statement, `i++` happens at the end of every loop. In our case, we increment the control variable `i` so that it creeps closer to the end of the loop each time.
+  This is a for loop which is likely the most common kind of loop. Inside the parentheses are three statements and you need all of them. The `let i = 0;` is you defining your control variable that will control the loop. For some reason, people always use `i`, not sure why. It's just that way. It really could be anything. The second statement `i <= 10` is just like the while loop, is that's the statement that as soon as it's false it breaks the loop. The last statement, `i++` happens at the end of every loop. In our case, we increment the control variable `i` so that it creeps closer to the end of the loop each time.
 
   An important note: in coding, we start counting from 0. In English, we count `1, 2, 3, 4, 5, etc.` but in coding, we count `0, 1, 2, 3, 4, etc.`. So the fifth element of a string is index 4 (where index is how we'd refer to where that item is in the string). Index 0 is the first element. It's weird but you get used to it and it makes a lot of things easier.
 
@@ -279,10 +908,6 @@ _(Updated: 6/11/2023)_
 
   Since you're adding one to `friendsAtYourParty` each time, and the loop will continue each time until it's less than zero, that condition will never happen. Thus it'll continue going until it crashes your code. Be careful of these. Nasty bugs.
 
----
-
-
-
 <!-- Summary -->
 
 ### Exercises
@@ -293,13 +918,13 @@ _(Updated: 6/11/2023)_
 
 
 
- In this task, we want you to load the [booleans.js file](./exercises/booleans.js){:target="_blank"} from an HTML named `booleans.html` and complete the challenges found inside. 
+  In this task, we want you to load the [booleans.js file](./exercises/booleans.js){:target="_blank"} from an HTML named `booleans.html` and complete the challenges found inside. 
 
 #### Task 2: Creating Variables
 
 
 
- In this task, we want you to load the [creating-variables.js file](./exercises/creating-variables.js){:target="_blank"} from an HTML named `creating-variables.html` and complete the challenges found inside. 
+  In this task, we want you to load the [creating-variables.js file](./exercises/creating-variables.js){:target="_blank"} from an HTML named `creating-variables.html` and complete the challenges found inside. 
 
 #### Task 3: JavaScript Numbers
 
@@ -307,184 +932,25 @@ _(Updated: 6/11/2023)_
 
   In this task, we want you to load the [numbers.js file](./exercises/numbers.js){:target="_blank"} from an HTML named `numbers.html` and complete the challenges found inside. 
 
-<!-- TODO: Move this Task to external files: -->
-
-
-#### Task 4
+#### Task 4: JavaScript Strings
 
 
 
-  In this task, we want you to copy and paste the following code in a file called `strings.js` and complete the challenges found inside:
+  In this task, we want you to load the [strings.js file](./exercises/strings.js){:target="_blank"} from an HTML named `strings.html` and complete the challenges found inside.
 
-  ```javascript
-  /* 
-  ------------------------------------------------------------------------------------
-  Tutorial: Strings in JavaScript
-  ------------------------------------------------------------------------------------
-  */
-
-  /*
-  ------------------------------------------------------------------------------------
-  🌟STRING:-
-
-  ◽ String is a datatype which consist of zero or more character enclosed in single quotes ('') or double quotes ("");
-
-  ◽ Basically, it is used to represent series or sequence of characters in text form.
-  ------------------------------------------------------------------------------------
-  */
-
-
-  // 🌟DECLARATION:-
-  let userName = "sourabh"; // declaring a variable "userName" which contains a string value of "sourabh"
-  console.log(userName); // will print sourabh in the console
-
-  // 🌟CHECK TYPE OF VARIABLE WITH "typeof" OPERATOR:-
-  console.log(typeof userName); // will print string in the console
-
-  // 🌟LENGTH PROPERTY: we can find string length using "length" property.
-  console.log(userName.length); // will print 7 in the console.
-
-  // 🌟STRING CONCATENATION: we can use "+" operator with string values to concatenate (join) them in a single string.
-  console.log("Welcome " + userName); // will print "Welcome sourabh" in the console
-
-  // 🌟ACCESSING STRING ENTRIES:-
-  // We can access string entries (or individual characters of a string) just like we do with arrays i.e using "indexes".
-  console.log(userName[0]); // will print "s"
-  console.log(userName[1]); // will print "o"
-  console.log(userName[2]); // will print "u"
-
-  //🌟ACCESS LAST ENTRY: Since index starts from "0", to access last entry we need to subtract 1 from total string length.
-  console.log(userName[userName.length - 1]); // will print "h"
-
-  /* 
-    🌟 TEMPLATE LITERALS -
-
-    -> Apart from defining strings in JavaScript using single quotes ('') or double quotes (""), there is a third way to define strings in Javascript too!
-      - We can define strings using backtick quotes (``) as well. For example - `Greetings!`
-      - These type of strings are called as Template Literals or Template strings.
-      - The benefit of using Template literals are that, it allows us to embed variables & expressions inside the string.
-        - This can be done using wrapping the expression inside of ${...} in the string.
-        - The value returned by the expression will then become a part of the string.
-        - TODO - After you learn about the various types of expressions in Javascript, try embedding the various types in template strings to see how they work.
-  */
-
-  let userFullName = "Niles Maxwell";
-  let numberOfTasksToday = 5;
-
-  console.log(`Greetings ${userFullName}, you have ${numberOfTasksToday} tasks to be done today.`); // Logs "Greetings Niles Maxwell, you have 5 tasks to be done today."
-
-  /* 
-      Multiline strings using Template Literals
-        - Template Literals can be used to form multi-line strings.
-        - This is easier than concatenating multiple single-line strings using the concatenation '+' operator.
-  */
-
-  let multiLineString1 = "Line 1\n" + //Multi-line string using the concatenation operator
-  "Line 2\n" +
-  "Line 3";
-
-  // Multi-line string using template literal without using the concatenation operator.
-  let multiLineString2 = `Line 1
-  Line 2
-  Line 3`;
-
-  // Both console.logs will log the same output to the console.
-  console.log(multiLineString1);
-  console.log(multiLineString2); 
-
-
-  /*
-  🌟STRING IMMUTABILITY:-
-
-  => Array are "mutable" in nature i.e we can modify/alter/mutate/change an individual array entry like this-
-
-  let numbers = [1, 2, 3, 4, 5]; // declaring an array
-
-  ⚡BEFORE MUTATION
-  console.log(numbers); // will print [1, 2, 3, 4, 5]
-
-  ⚡AFTER MUTATION
-  numbers[0] = "ONE"; // changing first entry of array i.e "1" to "ONE"
-  console.log(numbers); // will print ["ONE", 2, 3, 4, 5]
-
-
-  => But that is not the case with our strings. Strings are "immutable" in nature, we can't modify an individual entry of a string.
-
-  let str = "WOW";
-
-  ⚡BEFORE MUTATION
-  console.log(str); // will print "WOW"
-
-  ⚡AFTER MUTATION
-  str[0] = "N" // changing first entry of string i.e "W" to "N"
-  console.log(str); // will print "WOW" and not "NOW"
-
-  */
-
-  /*
-  ------------------------------------------------------------------------------------
-  Challenge 1: write a program to join your first name and last name in a single string.
-
-  -> declare a variable "firstName" and initialize it with your first name. 
-  -> declare a variable "lastName" and initialize it with your last name.
-  -> declare a variable "fullName" and assign it the concatenated value of "firstName" + "lastName" using "+" operator.
-  -> use console.log() and print the fullName in the console.
-
-  example:- if firstname is "sourabh" and lastname is "kheraliya" so output should be "sourabhkheraliya" as fullname.
-
-  🏋️‍♀️BONUS: there should be a space between your firstname and lastname.
-    (HINT: you can add additional space in the end of your firstName string just like example of string concatenation concept explained above)
-  ------------------------------------------------------------------------------------
-
-  ------------------------------------------------------------------------------------
-  Challenge 2: Write a dialogue script!
-
-  -> Step 1: Declare 3 variables and initialize them with random names for 2 heroes and 1 villain.
-  -> Step 2: Using what you learned about Template literals, write a dialogue flow between the 2 heroes, discussing about the villain you declared
-              and assign it to a variable.
-  -> Step 3: Make sure that the dialogue flow spans over multiple lines.
-  -> Step 4: Finally, use console.log() to log the the dialogue script to the console.
-
-  Dialogue script structure:
-  <Hero1>: <dialogue>
-  <Hero2>: <dialogue>
-  .
-  .
-  and so on.
-
-  ------------------------------------------------------------------------------------
-  */
-  ```
-
-<!-- TODO: Move this Task to external files: -->
-
-
-#### Task 5
+#### Task 5: JavaScript Variables
 
 
 
-  In this task, we want you to create a file called `variables.js` and :
+  In this task, we want you to load the [variables.js](./exercises/variables.js){:target="_blank"} from an HTML named `variables.html` and complete the challenges found inside.
 
-  - Calculate the sum of 5 + 10, using **two variables**. Store the sum to a **third variable**. Output the result to the console. Your final result should look like the following: `X plus Y equals Z`.
-  - Calculate the remainder of 29 ÷ 3, using **two variables**. Store the remainder to a **third variable**. Output the result to the console. Your final result should look like the following: `The remainder of X ÷ Y is Z`.
-  - Store your birth year in **a variable**. Store the current year in **a variable**. Calculate your age based on the difference of the stored values. Output to the console the following string based on the result: `You are approximately X years old`.
-
-<!-- TODO: Move this Task to external files: -->
-
-
-#### Task 6
+#### Task 6: JavaScript Loops
 
 
 
-  In this task, we want you to create a file called `experiments.js` and:
+  In this task, we want you to load the [loops.js](./exercises/loops.js){:target="_blank"} from an HTML named `loops.html` and complete the challenges found inside.
 
-  - Write some code that declares two variables, `character` and `timesToRepeat`.
-  - Using a loop, repeat that character that many times and then console.log it.
-  - Example, if I had character = 'f' and timesToRepeat = 5, it'd console.log `'fffff'`.
-
-  Try a few different combinations to make sure you got it right e.g. 'a' and 10, 'c' and 100, '🐶' and 3.
-
-  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week06/progress/progress.draft.w06.d01.csv**
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week06/progress/progress.draft.w06.d02.csv**
 
   You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
 
@@ -523,11 +989,11 @@ _(Updated: 6/11/2023)_
 
 <hr class="mt-1">
 
-<!-- Week 06 - Day 2 | Intro to Functions -->
+<!-- Week 06 - Day 3 | Intro to Functions -->
 <details markdown="1">
   <summary>
     <h2>
-      <span class="summary-day">Week 06 - Day 2</span> | Intro to Functions</h2>
+      <span class="summary-day">Week 06 - Day 3</span> | Intro to Functions</h2>
   </summary>
 
 ### Schedule
@@ -716,8 +1182,8 @@ _(Updated: 6/11/2023)_
   console.log(F); // works, F was declared in the global scope
   ```
 
----
 
+---
 
 
 #### Built-ins
@@ -760,337 +1226,29 @@ _(Updated: 6/11/2023)_
   console.log(Date.now());
   ```
 
----
-
-
-
 <!-- Summary -->
 
 ### Exercises
 
-#### Task 1
+#### Task 1: JavaScript Functions
 
 
 
-  In this task, we want you to copy and paste the following code in a file called `functions.js` and complete the challenges found inside:
+  In this task, we want you to load the [functions.js](./exercises/functions.js){:target="_blank"} from an HTML named `functions.html` and complete the challenges found inside.
 
-  ```javascript
-    /* 
-  ------------------------------------------------------------------------------------
-  Tutorial: Functions in JavaScript
-  ------------------------------------------------------------------------------------
-  */
+#### Task 2: JavaScript Arrow Functions
 
 
-  /*
-  ------------------------------------------------------------------------------------
-  FUNCTIONS: A function is a repeating piece of "Processing" while the input and output changes.
-  ------------------------------------------------------------------------------------
 
-  ------------------------------------------------------------------------------------
-  EXAMPLE: washing machine which takes dirty clothes as an input, do some processing i.e washing the clothes and returns the washed clothes as an output. Functions are same as washing machine, they take some input, do some processing on that input and then returns that processed value as an output. 
-  ------------------------------------------------------------------------------------
+  In this task, we want you to load the [arrow-functions.js](./exercises/arrow-functions.js){:target="_blank"} from an HTML named `arrow-functions.html` and complete the challenges found inside.
 
-  ------------------------------------------------------------------------------------
+#### Task 3: JavaScript Higher Order Functions
 
-  SYNTAX:-
 
-  function functionName(parameterOne, parameterTwo){
-      some processing code...
-  }
 
-  ------------------------------------------------------------------------------------
+  In this task, we want you to load the [higher-order-functions.js](./exercises/higher-order-functions.js){:target="_blank"} from an HTML named `higher-order-functions.html` and complete the challenges found inside.
 
-  ------------------------------------------------------------------------------------
-  FUNCTION EXAMPLE - the below 👇 example takes a name as an input and prints hello "passedName" in the console;
-  ------------------------------------------------------------------------------------
-  */
-
-
-  function showName(name){
-      console.log("hello " + name);
-  }
-
-  showName("sourabh"); // will print "hello sourabh" in the console
-
-
-  /*
-  ------------------------------------------------------------------------------------
-
-  PARAMETERS & ARGUMENTS:-
-
-  1. PARAMETERS: Parameters are the variable names listed inside of the function definition's parenthesis. (for the above showName function the parameter is "name" listed inside the parenthesis.)
-
-  2. ARGUMENTS: Arguments are the actual values passed to a function when it is called. (for the above function showName the argument is "sourabh" which is passed to the function "showName" when called.)
-    
-  ------------------------------------------------------------------------------------
-  */
-
-  /*
-  ------------------------------------------------------------------------------------
-
-  RETURN VALUE & UNDEFINED:-
-
-  A funtion which do not returns something returns a special value "undefined".
-  Also we can assign the returned value of a function as a value in a variable identifier.
-    
-  ------------------------------------------------------------------------------------
-  */
-
-  console.log(showName("Tanay pratap")); // will print "undefined" in the console because showName is not returning any value
-
-  // Returning value from the function
-  function add(num1, num2){
-      return num1 + num2;
-  }
-
-  console.log(add(5, 6)); // will print 11 in the console
-
-
-  /*
-  ------------------------------------------------------------------------------------
-  Challenge: create a function "welcomeUser" which will take username as an input and returns "Welcome " + passed username as an output.
-  
-  -> your function name should be "welcomeUser".
-  -> parameter name should be "userName".
-  -> return Welcome + passed username value as an return value.
-  -> pass your name as an argument to the "welcomeUser" function.
-  -> store that return value in a new variable named as "greeting".
-  -> use console.log() to show the greeting value.
-  ------------------------------------------------------------------------------------
-  */
-  ```
-
-#### Task 2
-
-
-
-  In this task, we want you to copy and paste the following code in a file called `arrow-functions.js` and complete the challenges found inside:
-
-  ```javascript
-  //In the previous file you aquired the basic concept of functions and how to make a function.
-
-  /*
-  In this file as the filename suggests, we would learn about arrow functions, before starting with this it is recommended to have a basic idea of how functions work and how they are build, so that we could understand what is the purpose of "Arrow functions".
-  */
-
-  /*
-  What is arrow function or => ?
-  It's a new feature that introduced in ES6 and is called arrow function. The left part denotes the input of a function and the right part the output of that function.
-  Arrow functions introduce concise body syntax, or implicit return. This allows the omission of the curly brackets and the return keyword. Implicit return is useful for creating succinct one-line operations in map , filter , and other common array methods.
-
-  (If you are familiar with python you can compare it to list comprehension or comprehension method, it is used to reduce the line of codes and make the function/code look compact and neat.)
-  */
-
-  //How does it work?
-
-  hello = function() {
-    return ("Hello World!") ;  //A normal function.
-  };
-
-  //----------------------------------------------------------------------------------------------------------
-
-  hello = val => "Hello " + val ; //The same function above but with arrow function '=>'.
-
-  /* 
-
-  As you can see from the example above, that you have to write less lines of code for the same function that you created using the layman way.
-  But there are some points that you should remember while using the arrow function, such as:
-  -> You don't need to use {} or return when you are returning a single value.
-  -> You can avoid using (), when there is only one parameter in your function.
-  -> You should not add return in single return type as you have to use {} for applying the return keyword.
-
-  */
-
-  //------------------------------------------------------------------------------------------------------
-
-  /* 
-  Aside from this there are many ways to creatively use the arrow function, you should try the things mentioned above in your local console and experiment with it.
-  If you wanna read more about this you can visit the links below:
-  -> https://www.w3schools.com/js/js_arrow_function.asp
-  -> https://devdocs.io/javascript/
-
-  */
-
-  //-------------------------------------------------------------------------------------------------------
-
-  /* 
-  A challenge problem to test your understanding and making it crystal clear.
-  (Do not skip it as it will only benefit you.)
-
-  Q1) Write an arrow function expression called greet(). It should accept a single argument representing a person's name. It should return a greeting string.
-  Q2) Write an arrow function named arrayAverage that accepts an array of numbers and returns the average of those numbers.
-  Q3) Write an arrow function for the following JavaScript function:
-
-  function nameAge(name, age) {
-    console.log("Hello " + name);
-    console.log("You are " + age + " years old");
-  }
-
-
-  If you wanna practice more or you are stuck, you can check the solutions at:
-
-  Avoid looking at the solutions first, and try to complete the problems above by yourself.
-
-  https://www.tutorialsandyou.com/javascript/javascript-arrow-function-exercises-and-practice-questions-73.html
-  */
-
-  //----------------------------------------------------------------------------------------------------------
-
-  /*
-  Believe in your grind, here's a quote for you:
-
-  "There is nothing outside of yourself that can ever enable you to get better, stronger, richer, quicker, or smarter. Everything is within. Everything exists. Seek nothing outside of yourself." ~miyamoto musashi
-  */
-  ```
-
-#### Task 3
-
-
-
-  In this task, we want you to copy and paste the following code in a file called `higher-order-functions.js` and complete the challenges found inside:
-
-  ```javascript
-  /*
-  In this file as the filename suggests, we would learn about higher order functions, before starting with this it is recommended to have a basic idea of how functions work and how they are build, so that we could understand what is the purpose of "Higher Order functions".
-  */
-
-  /*
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  What is a Higher Order Function (HOF) ?
-  A function that accepts and/or returns another function is called a higher-order function.
-  It’s higher-order because instead of strings, numbers, or booleans, it goes higher to operate on functions.
-  Probably the greatest benefit of HOFs is greater reusability.
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  */
-
-  /*
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Why is the need for higher order functions ? 
-  As a functional programming language, JavaScript uses higher-order functions to implement abstraction at an even higher level.
-  Abstraction means hiding certain details and showing only essential information to the user. 
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  */
-
-  //Below is an example to understand what higher order functions are:
-
-  //Pass function as an argument to another function
-
-  //array of names to be used in the function
-
-  const names= ['John', 'Tina','Kale','Max'];
-
-  //Function "useFunction" takes an array and another function fn as parameters
-  function useFunction(arr,fn){
-    for(let i=0; i<arr.length; i++){
-      fn(arr[i]);
-    }
-  }                                
-
-  //Function that is being used as a parameter
-  function argFn (name){
-    console.log("Hello " + name );
-  }
-
-  //calling useFunction() with argFn() as a parameter
-  useFunction(names,argFn);
-
-  /*Result printed:
-    Hello John
-    Hello Tina
-    Hello Kale
-    Hello Max
-  */
-
-
-
-  /*
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Some popular higher order functions in JavaScript are:
-  1.map
-  2.filter
-  3.reduce
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  */
-
-
-
-  /*
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1. Map
-  The map() method is used for creating a new array from an existing one, applying a function to each one of the elements of the first array.
-
-  Syntax:
-  var new_array = arr.map(function callback(element, index, array) {
-      // Return value for new_array
-  }[, thisArg])
-
-  In the callback, only the element is required. Other parameters are optional.
-
-  Example: 
-  In the following example, each number in an array is doubled.
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  */
-
-  const numbers = [1, 2, 3, 4];
-  const doubled = numbers.map(item => item * 2);
-  console.log(doubled); //Output array "doubled" -> [2, 4, 6, 8]
-
-  /*
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  2. Filter
-  The filter() method takes each element in an array and it applies a conditional statement against it. 
-  If this conditional returns true, the element gets pushed to the output array.
-  If the condition returns false, the element does not get pushed to the output array.
-
-  Syntax
-  var new_array = arr.filter(function callback(element, index, array) {
-      // Return true or false
-  }[, thisArg])
-
-  The syntax for filter is similar to map, except the callback function should return true to keep the element, or false otherwise. In the callback, only the element is required.
-
-  Example:
-  In the following example, odd numbers are "filtered" out, leaving only even numbers.
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  */
-
-  const evens = numbers.filter(item => item % 2 === 0);
-  console.log(evens); // Output array "evens" -> [2, 4]
-
-  /*
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  3. Reduce
-  The reduce() method reduces an array of values down to just one value. 
-  To get the output value, it runs a reducer function on each element of the array.
-
-  Syntax
-  arr.reduce(callback[, initialValue])
-
-  The callback argument is a function that will be called once for every item in the array. 
-
-  Example:
-  The following example adds every number together in an array of numbers.
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  */
-
-  const sum = numbers.reduce(function (result, item) {
-      return result + item;
-    }, 0);
-    console.log(sum); // Output "sum" -> 10
-
-
-  /*
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Challenges:
-  1. Map -> Take an array arr = [1, 4, 9, 16, 25] and create a new array containing the square roots of the numbers in the first array.
-  2. Filter -> Take an array arr = [2, 1, 7, 3, 6, 5, 8] and create a new array containing only odd numbers from first array.
-  3. Reduce -> Take an array arr = [1,3,5,7] and return the product of all the elements in the array.
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  */
-  ```
-
-  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week06/progress/progress.draft.w06.d02.csv**
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week06/progress/progress.draft.w06.d03.csv**
 
   You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
 
@@ -1101,21 +1259,21 @@ _(Updated: 6/11/2023)_
 
   **Content is based on the following sources:**
 
-  [Functions](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/F-functions.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/F-functions.md){:target="_blank"}
+  - [Functions](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/F-functions.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/F-functions.md){:target="_blank"}
 
-  [Scope](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/G-scope.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/G-scope.md){:target="_blank"}
+  - [Scope](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/G-scope.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/G-scope.md){:target="_blank"}
 
-  [Built-ins](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/H-builtins.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/H-builtins.md){:target="_blank"}
+  - [Built-ins](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/H-builtins.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/H-builtins.md){:target="_blank"}
 
   Please do not forget to ⭐ the [repo](https://github.com/btholt/complete-intro-to-web-dev-v3){:target="_blank"}!
 
   **Exercises are based on the following sources:**
 
-  [TeachMeJavaScriptLikeIm5 arrow-functions](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/8-functions/arrow-function.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/8-functions/arrow-function.js){:target="_blank"}
+  - [TeachMeJavaScriptLikeIm5 arrow-functions](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/8-functions/arrow-function.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/8-functions/arrow-function.js){:target="_blank"}
 
-  [TeachMeJavaScriptLikeIm5 functions](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/8-functions/functions.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/8-functions/functions.js){:target="_blank"}
+  - [TeachMeJavaScriptLikeIm5 functions](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/8-functions/functions.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/8-functions/functions.js){:target="_blank"}
 
-  [TeachMeJavaScriptLikeIm5 higher-order-functions](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/8-functions/higher-order-functions.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/8-functions/higher-order-functions.js){:target="_blank"}
+  - [TeachMeJavaScriptLikeIm5 higher-order-functions](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/8-functions/higher-order-functions.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/8-functions/higher-order-functions.js){:target="_blank"}
 
   Please do not forget to ⭐ the [repo](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5){:target="_blank"}!
   
@@ -1123,11 +1281,11 @@ _(Updated: 6/11/2023)_
 
 <hr class="mt-1">
 
-<!-- Week 06 - Day 3 | Intro to Objects -->
+<!-- Week 06 - Day 4 | Intro to Objects -->
 <details markdown="1">
   <summary>
     <h2>
-      <span class="summary-day">Week 06 - Day 3</span> | Intro to Objects</h2>
+      <span class="summary-day">Week 06 - Day 4</span> | Intro to Objects</h2>
   </summary>
 
 ### Schedule
@@ -1222,8 +1380,8 @@ _(Updated: 6/11/2023)_
   console.log(me.location.state);
   ```
 
----
 
+---
 
 
 #### Context
@@ -1271,131 +1429,17 @@ _(Updated: 6/11/2023)_
 
   A good rule of thumb (that is unfortunately not always true) is that if you're inside an object of some sort, the `this` will be that object. If not, it'll be the global object, `window`. There are crazy exceptions to this and you can even manipulate it yourself. For now, operate with that definition. It's a deep-and-dark rabbit hole to go down so let's continue and you can check the [extras](#extra-resources) for a more in-depth look.
 
----
-
-
-
 <!-- Summary -->
 
 ### Exercises
 
-  In this exercise, we want you to copy and paste the following code in a file called `using-objects-basic.js` and complete the challenges found inside:
+#### Task 1: JavaScript Objects Basics
 
-  ```javascript
-  /* 
-  ------------------------------------------------------------------------------------
-  Tutorial: using objects (basics)
-  ------------------------------------------------------------------------------------
-  */
 
-  // Objects are containers that you can use for storing a collection of related data. For example, you might want to store some information about a person called Jane, such as her name, age and the things she likes.
 
-  // You can create an object by simply declaring it, similar to how you would assign an array to a variable. It is good practice to declare objects using the const keyword. Objects are always wrapped in curly braces.
+  In this task, we want you to load the [using-objects-basic.js](./exercises/using-objects-basic.js){:target="_blank"} from an HTML named `using-objects-basic.html` and complete the challenges found inside.
 
-  const myEmptyObject = {}; // an empty object
-
-  // Like arrays, objects can contain any type of data, including strings, numbers, booleans and arrays. Here's an object containing some info about Jane.
-
-  const jane = {
-    firstName: 'Jane',
-    lastName: 'Doe',
-    age: 42,
-    likesMusic: true,
-    favoriteThings: ['coffee', 'cake', 'dancing', 'disc golf'],
-  };
-
-  // Objects are organized into named values known as properties or key-value pairs. The key is similar to a variable name and the value contains the data. The key and the value are separated by a colon (:), and each key-value pair is separated by a comma. This is one of the important differences between objects and arrays, which store indexed values.
-
-  // So, in the Jane object above, firstName is a key and the string 'Jane' is its value. This key-value pair is one of the object's properties.
-
-  /*
-  ------------------------------------------------------------------------------------
-  Challenge: 1. create an object containing some info about yourself, similar to the 
-  Jane object above
-  ------------------------------------------------------------------------------------
-  */
-
-  // You can access an object's properties by using dot notation, eg ObjectName.propertyName. This is how you can access some of the properties of the Jane object:
-  console.log(jane.firstName); // expected output: 'Jane'
-  console.log(jane.age); // expected output: 42
-
-  /*
-  ------------------------------------------------------------------------------------
-  Challenge: 2. log one of the properties of your own object to the console using dot 
-  notation
-  ------------------------------------------------------------------------------------
-  */
-
-  // You can assign the value of an object property to a separate variable.
-  const myVariable = jane.age;
-  console.log(myVariable); // expected output: 42
-
-  /*
-  ------------------------------------------------------------------------------------
-  Challenge: 3. assign a property of your own object to a variable and then log the 
-  value of the variable to the console
-  ------------------------------------------------------------------------------------
-  */
-
-  // Object keys are typically written in camelCase with no spaces between words. If you want to use separated words, you need to wrap the name in either single or double quotes.
-  const anotherObject = {
-    'my favorite color': 'purple',
-  };
-
-  // You can't access properties like 'my favorite color' using dot notation, you need to use bracket notation instead and the property name must be wrapped in quotes.
-  console.log(anotherObject['my favorite color']); // expected output: 'purple'
-
-  // You can also access single-word properties using bracket notation. Again, the property name must be wrapped in quotes.
-  console.log(jane['firstName']); // expected output: 'Jane'
-
-  /*
-  ------------------------------------------------------------------------------------
-  Challenge: 4. log one of the properties of your object to the console using bracket 
-  notation
-  ------------------------------------------------------------------------------------
-  */
-
-  // Bracket notation also allows you to access object properties with the values stored inside variables. You simply use the variable name inside the brackets but this time without any quotes.
-  const propertyNameVariable = 'my favorite color';
-  console.log(anotherObject[propertyNameVariable]); // expected output: 'purple'
-
-  /*
-  ------------------------------------------------------------------------------------
-  Challenge: 5. create and use a variable to access a property from your object using 
-  bracket notation and log it to the console
-  ------------------------------------------------------------------------------------
-  */
-
-  // You can update an existing object's properties at any time, even if they were declared using const. You can do this using either dot or bracket notation and it's a similar process to reassigning a new value to a variable.
-  jane.age = 52;
-  console.log(jane.age); // expected output: 52
-  jane['age'] = 62;
-  console.log(jane['age']); // expected output: 62
-
-  // We can also add new properties to an object at any time.
-  jane.favoriteColor = 'tartan';
-  console.log(jane);
-  /* expected output: 
-      { firstName: 'Jane',
-      lastName: 'Doe',
-      age: 62,
-      likesMusic: true,
-      favoriteThings: [ 'coffee', 'cake', 'dancing', 'disc golf' ],
-      favoriteColor: 'tartan' }
-  */
-
-  jane['has Netflix account'] = true;
-  console.log(jane['has Netflix account']); // expected output: 'true'
-
-  /*
-  ------------------------------------------------------------------------------------
-  Challenge: 6. update one existing property and add one new property to your own 
-  object and then log the entire object to the console 
-  ------------------------------------------------------------------------------------
-  */
-  ```
-
-  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week06/progress/progress.draft.w06.d03.csv**
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week06/progress/progress.draft.w06.d04.csv**
 
   You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
 
@@ -1408,15 +1452,15 @@ _(Updated: 6/11/2023)_
 
   **Content is based on the following sources:**
 
-  [Objects](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/I-objects.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/I-objects.md){:target="_blank"}
+  - [Objects](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/I-objects.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/I-objects.md){:target="_blank"}
 
-  [Context](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/J-context.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/J-context.md){:target="_blank"}
+  - [Context](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/J-context.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/J-context.md){:target="_blank"}
 
   Please do not forget to ⭐ the [repo](https://github.com/btholt/complete-intro-to-web-dev-v3){:target="_blank"}!
 
   **Exercise is based on the following sources:**
 
-  [TeachMeJavaScriptLikeIm5 using-objects-basic](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/4-objects/using-objects-basic.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/4-objects/using-objects-basic.js){:target="_blank"}
+  - [TeachMeJavaScriptLikeIm5 using-objects-basic](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/4-objects/using-objects-basic.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/4-objects/using-objects-basic.js){:target="_blank"}
 
   Please do not forget to ⭐ the [repo](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5){:target="_blank"}!
 
@@ -1425,11 +1469,11 @@ _(Updated: 6/11/2023)_
 
 <hr class="mt-1">
 
-<!-- Week 06 - Day 4 | Intro to Arrays -->
+<!-- Week 06 - Day 5 | Intro to Arrays -->
 <details markdown="1">
   <summary>
     <h2>
-      <span class="summary-day">Week 06 - Day 4</span> | Intro to Arrays</h2>
+      <span class="summary-day">Week 06 - Day 5</span> | Intro to Arrays</h2>
   </summary>
 
 ### Schedule
@@ -1443,6 +1487,8 @@ _(Updated: 6/11/2023)_
 #### Intro to Arrays
 
 
+
+  ![](./assets/flat-design-devops-illustration.jpg)
 
   [Watch **CS Discoveries: Introduction to Arrays**](https://www.youtube.com/watch?v=seBDTeZmb-k){:target="_blank"}
 
@@ -1498,6 +1544,8 @@ _(Updated: 6/11/2023)_
   console.log(courses);
   ```
 
+  <a href="#flems-enable" class="flems-button">&#9658; Live coding</a>
+
   The first thing we do is add an element to the end using the push function that arrays have. It "pushes" the element on the end.
 
   Below that, we're overriding index 2 with a new course. This will throw away what was there before and set it to be what we've set it to be.
@@ -1524,6 +1572,8 @@ _(Updated: 6/11/2023)_
   });
   ```
 
+  <a href="#flems-enable" class="flems-button">&#9658; Live coding</a>
+
   The first way, using a for loop, is using that `i` control variable which gets incremented each loop. We use that `i` to access each item in the array on each iteration of the loop. We have the loop to stop when `i` gets equal to the `length` of cities. Very useful pattern. You'll see it a lot.
 
   The second way is using a function that arrays have called `forEach`. This `forEach` method takes in a function and that function will be called once on each item of the array. It will pass that item into the function, which is what `city` is in this situation. Both are useful patterns to know. You'll use both frequently. While you're getting started, just use the one you feel comfortable with. They have different things that make them preferable in different situations but usually you can use either. Method 2 may be a bit more advanced but I don't think you should be scared of it. For now prefer method 1. I just wanted you to see method 2.
@@ -1532,223 +1582,37 @@ _(Updated: 6/11/2023)_
 
 ### Exercises
 
-#### Task 1
+#### Task 1: Declaring JavaScript Arrays
 
 
 
-  In this task, we want you to copy and paste the following code in a file called `declaring-arrays.js` and complete the challenges found inside:
+  In this task, we want you to load the [declaring-arrays.js](./exercises/declaring-arrays.js){:target="_blank"} from an HTML named `declaring-arrays.html` and complete the challenges found inside.
 
-  ```javascript
-  /* 
-  ------------------------------------------------------------------------------------
-  Tutorial: Declaring an array
-  ------------------------------------------------------------------------------------
-  */
+#### Task 2: Indexing JavaScript Arrays
 
-  // To create an array we use square brackets []
-  // Arrays are indexed data structures
-  // The objects we place inside are indexed with integer's starting at zero
 
-  let fruits = ['Apple', 'Banana'];
 
-  // For this example 'Apple' is indexed at position 0 and 'Banana' is indexed at position 1 inside the array fruits.
-  console.log(fruits[0]);
-  console.log(fruits[1]);
+  In this task, we want you to load the [indexing-arrays.js](./exercises/indexing-arrays.js){:target="_blank"} from an HTML named `indexing-arrays.html` and complete the challenges found inside.
 
-  /*
-  ------------------------------------------------------------------------------------
-  Challenge: 1. Create an array for years that inside have 1999, 1984 and 2021, the least recent year should be at position 0. 
-              2. console.log each item in the array to check its position.
-  ------------------------------------------------------------------------------------
-  */
-  ```
+#### Task 3: Modifying JavaScript Arrays
 
-#### Task 2
 
 
+  In this task, we want you to load the [modifying-arrays.js](./exercises/modifying-arrays.js){:target="_blank"} from an HTML named `modifying-arrays.html` and complete the challenges found inside.
 
-  In this task, we want you to copy and paste the following code in a file called `indexing-arrays.js` and complete the challenges found inside:
+#### Task 4: Properties and Methods of JavaScript Arrays
 
-  ```javascript
-  /* 
-  ------------------------------------------------------------------------------------
-  Tutorial: Indexing Arrays
-  ------------------------------------------------------------------------------------
-  */
 
-  // Arrays are indexed with integer values beginning with 0.
-  // Lets use the example below
 
-  let pringles = ['classic', 'pizza', 'ranch'];
+  In this task, we want you to load the [properties-and-methods-of-arrays.js](./exercises/properties-and-methods-of-arrays.js){:target="_blank"} from an HTML named `properties-and-methods-of-arrays.html` and complete the challenges found inside.
 
-  // The index value of each element inside the array is the following:
+#### Task 5: Test your skills: JavaScript Arrays
 
-  // 'classic'  |  'pizza'  |  'ranch'
-  //     0            1           2
 
-  // And we can verify this by printing on console the elements of the array 
-  // by it's position or index value
 
-  console.log(0); // 'classic'
-  console.log(1); // 'pizza'
-  console.log(2); // 'ranch'
+  In this task, we want you to load the [arrays-skills.js](./exercises/arrays-skills.js){:target="_blank"} from an HTML named `arrays-skills.html` and complete the challenges found inside.
 
-  // We can find out how many items are in an array with the length property.
-
-  console.log(pringles.length);
-
-  // output
-  // 3
-
-  // Although the indices of pringles consists of 0 to 2, the length property will output the actual amount of items in the array, starting with 1.
-
-  // Counting starts with 0 in indices, which goes against our natural intuition to start counting at 1, 
-  // so special care must be taken to remember this until it becomes natural. 
-
-  //If we want to find out the index number of a specific item in an array, such as pizza, we can use the indexOf() method.
-
-  console.log(pringles.indexOf('pizza'));
-
-  // output
-  // 1
-
-  // If an index number is not found, such as for a value that does not exist, the console will return -1.
-
-  console.log(pringles.indexOf('blue cheese'));
-
-  // output
-  // -1
-              
-  /*
-  ------------------------------------------------------------------------------------
-  Challenge: 1. Consider the following array: myColor = ['Red', 'Green', 'White', 'Black'];
-                What is the length of the array?
-              2. With the previous array, what is the index value/position of the 'Yellow' color.
-  ------------------------------------------------------------------------------------
-  */
-  ```
-
-#### Task 3
-
-
-
-  In this task, we want you to copy and paste the following code in a file called `modifying-arrays.js` and complete the challenges found inside:
-
-  ```javascript
-  /* 
-  ------------------------------------------------------------------------------------
-  Tutorial: Modify an array using indexes
-  ------------------------------------------------------------------------------------
-  */
-
-  // The most basic way to modify an array is to use indexes. We replace the element at the 0th index by 5.
-  var numbers = [1, 2, 3, 4];
-  numbers[0] = 5;
-  console.log(numbers);
-
-  /*
-  ------------------------------------------------------------------------------------
-  Challenge: Given an array of positive integers above, if a number in the array of numbers is even, then multiply it by 2
-  ------------------------------------------------------------------------------------
-  */
-  ```
-
-#### Task 4
-
-
-
-  In this task, we want you to copy and paste the following code in a file called `properties-and-methods-of-arrays.js` and complete the challenges found inside:
-
-  ```javascript
-  // Some properties and methods of array are :
-
-
-  // 1. Returns the number of elements :
-
-      //length
-
-  // example
-
-  var fruits = ["Orange", "Apple", "Banana"];
-
-  console.log(fruits.length); 
-
-  // Output : 3
-
-
-
-
-  // 2. Sorts the array :
-
-      //sort();
-
-  // example
-
-  var fruits = ["Orange", "Apple", "Banana"];
-
-  console.log(fruits.sort());  
-
-  // Output : ['Apple', 'Banana', 'Orange']
-
-
-
-
-  // 3. Joins arrays and returns an array with the joined arrays :
-
-      //concat();
-
-  // example
-
-  var fruits = ["Orange", "Apple", "Banana"];
-  var car = ["Audi", "BMW", "Ferrari"];
-
-  console.log(fruits.concat(car));
-
-  // Output : [ 'Orange', 'Apple', 'Banana', 'Audi', 'BMW', 'Ferrari' ]
-
-
-
-
-  // 4. Joins all elements of an array into a string :
-
-      //join();
-
-  // example
-
-  var fruits = ["Orange", "Apple", "Banana"];
-
-  console.log(fruits.join());
-
-  // Output : Orange,Apple,Banana
-
-
-
-
-  // 5. Search the array for an element and returns its position :
-
-      //indexOf();
-
-  // example
-
-  var fruits = ["Orange", "Apple", "Banana"];
-
-  console.log(fruits.indexOf("Apple"));
-
-  // Output : 1
-
-
-
-
-
-  /*
-  ------------------------------------------------------------------------------------
-  Challenge 1: Find the length of the array Car ["Audi", "BMW", "Ferrari"] using the properties of the array.
-  Challenge 2: Find the position of the element "BMW" in the array Car ["Audi", "BMW", "Ferrari"] using the properties of the array.
-  ------------------------------------------------------------------------------------
-  */
-  ```
-
-  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week06/progress/progress.draft.w06.d04.csv**
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week06/progress/progress.draft.w06.d05.csv**
 
   You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
 
@@ -1759,26 +1623,23 @@ _(Updated: 6/11/2023)_
 
   **Content is based on the following sources:**
 
-  [Arrays](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/K-arrays.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/K-arrays.md){:target="_blank"}
+  - [Arrays](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/main/lessons/04-javascript/K-arrays.md){:target="_blank"} [(Permalink)](https://github.com/btholt/complete-intro-to-web-dev-v3/blob/a46a32bb9d641523163d74c28340ec686c5be2f9/lessons/04-javascript/K-arrays.md){:target="_blank"}
 
   Please do not forget to ⭐ the [repo](https://github.com/btholt/complete-intro-to-web-dev-v3){:target="_blank"}!
 
-  **Exercise is based on the following sources:**
+  **Exercises are based on the following sources:**
 
-  [TeachMeJavaScriptLikeIm5 declaring-arrays](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/3-arrays/declaring-arrays.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/3-arrays/declaring-arrays.js){:target="_blank"}
+  - [TeachMeJavaScriptLikeIm5 declaring-arrays](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/3-arrays/declaring-arrays.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/3-arrays/declaring-arrays.js){:target="_blank"}
 
-  [TeachMeJavaScriptLikeIm5 indexing-arrays](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/3-arrays/indexing-arrays.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/3-arrays/indexing-arrays.js){:target="_blank"}
+  - [TeachMeJavaScriptLikeIm5 indexing-arrays](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/3-arrays/indexing-arrays.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/3-arrays/indexing-arrays.js){:target="_blank"}
 
-  [TeachMeJavaScriptLikeIm5 modifying-arrays](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/3-arrays/modifying-arrays.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/3-arrays/modifying-arrays.js){:target="_blank"}
+  - [TeachMeJavaScriptLikeIm5 modifying-arrays](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/3-arrays/modifying-arrays.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/3-arrays/modifying-arrays.js){:target="_blank"}
 
-  [TeachMeJavaScriptLikeIm5 properties_and_methods_of_arrays](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/3-arrays/properties_and_methods_of_arrays.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/3-arrays/properties_and_methods_of_arrays.js){:target="_blank"}
+  - [TeachMeJavaScriptLikeIm5 properties_and_methods_of_arrays](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/main/3-arrays/properties_and_methods_of_arrays.js){:target="_blank"} [(Permalink)](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5/blob/bcbe160a29718c0eb832fbf7af113b896ff06deb/3-arrays/properties_and_methods_of_arrays.js){:target="_blank"}
 
   Please do not forget to ⭐ the [repo](https://github.com/inspirezonetech/TeachMeJavaScriptLikeIm5){:target="_blank"}!
   
 </details>
-
-<hr class="mt-1">
-
 
 
 <hr class="mt-1">
