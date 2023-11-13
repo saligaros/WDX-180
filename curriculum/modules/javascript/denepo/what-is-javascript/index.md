@@ -15,9 +15,7 @@ title: What is JavaScript?
 
   JavaScript is the only programming language supported by web browsers, this
   makes is a very common language. Every website that needs interactivity uses
-  JavaScript alongside HTML & CSS. Because people across the world with all levels
-  of programming experience are writing web pages, JavaScript has become something
-  like the English of programming languages:
+  JavaScript alongside HTML & CSS. Because people across the world with all levels of programming experience are writing web pages, JavaScript has become something like the English of programming languages:
 
   - It's everywhere, most developers will know at least a little bit of
     JavaScript.
@@ -73,7 +71,7 @@ title: What is JavaScript?
 
   You can also write your code in a script tag of an HTML file then open the HTML
   file in your browser. The JavaScript will run automatically when the page is
-  loaded. See this in action with [`./assets/1-inline-script-tag.html`](./assets/1-inline-script-tag.html).
+  loaded. See this in action with [`./assets/1-inline-script-tag.html`]({{ WDX:ASSETS_AS_CODE }}/1-inline-script-tag.html){:target="_blank"}.
 
   <!-- TODO: The ./assets above pointing to a folder containing code, should be managed in some way, e.g. redirect to GitHub or local repo, display them inline or through a viewer (Flems/Codesandbox/other)  -->
 
@@ -86,11 +84,8 @@ title: What is JavaScript?
   **3. Loading JS files into HTML**
 
   You can also write your code in a separate `.js` file, then load the file into
-  your HTML to execute the code. There are two different ways you can load a `.js`
-  file into your HTML, you can see them in action with [`./assets/2-separate-script-file/index.html`](./assets/2-separate-script-file/index.html) and
-  [`./assets/3-separate-module-files/index.html`](./assets/3-separate-module-files/index.html) (you'll learn more about scripts vs. modules later on).
+  your HTML to execute the code. There are two different ways you can load a `.js` file into your HTML, you can see them in action with [`./assets/2-separate-script-file/index.html`]({{ WDX:ASSETS_AS_CODE }}/2-separate-script-file/index.html){:target="_blank"} and [`./assets/3-separate-module-files/index.html`]({{ WDX:ASSETS_AS_CODE }}/3-separate-module-files/index.html){:target="_blank"} (you'll learn more about scripts vs. modules later on).
   <!-- TODO: Same as above... -->
-
 
   <!-- TODO: INTEGRATE: https://stackoverflow.com/a/53821485/4861760 -->
 
@@ -423,15 +418,30 @@ title: What is JavaScript?
 
   **Programs to Study**
 
-  A very important skill to learn as a programmer is not being afraid of code you
-  don't understand. There is always _something_ you can understand and there is
-  always a way to understand the rest. You aren't expected understand all the
-  syntax in this folder just yet.
+  A very important skill to learn as a programmer is not being afraid of code you don't understand. There is always _something_ you can understand and there is always a way to understand the rest. You aren't expected understand all the syntax in this folder just yet.
 
-  Instead focus on what you _can_ understand about each program at a higher level,
-  like in the diagram at the top of this README. For all of these examples and
-  exercises try running the program many times inputting different data and seeing
-  what comes out.
+  Instead focus on what you _can_ understand about each program at a higher level, like in the diagram at the top of this README. For all of these examples and exercises try running the program many times inputting different data and seeing what comes out.
+
+### Summary
+
+<!-- WDX:META:PROGRESS:task=Explore Study Lenses -->
+<!-- WDX:META:PROGRESS:task=Practice 'Program Explaining' -->
+### Exercises
+
+  **Explore Study Lenses**
+
+  Continue your exploration of the `study-lenses` tool. Run the following commands on your local copy of the `WDX-180` repo:
+
+  - `cd curriculum/week{{ WDX:WEEK_NUM}}/exercises/exploring-study-lenses`
+  - `study`
+
+  Once the `study-lenses` is up and running on your browser, click on the **README.md** link to open up the slides. Browse through the slides _(using the left and right arrow keys on your keyboard or just by pressing space)_, click on the **load** buttons to load the file and follow the study guide on each of them.
+
+  Explore these with your team.
+
+  ---
+
+  **Practice Program Explaining**
 
   Practice explaining what is happening in each program using these terms:
 
@@ -447,10 +457,7 @@ title: What is JavaScript?
   - **Test Cases**: Specific examples of data that goes in and the data that comes
     out.
 
-  <!-- TODO: Maybe this has to be removed. -->
-  In the `/examples` folder you will find a few programs with a comment describing
-  the **behavior**, **data in** and **data out**. Your challenge in `/exericses`
-  is to fill in the same information for new programs.
+ In the `{{WDX:ASSETS_DIR}}/examples/` folder you will find a few programs with a comment describing the **behavior**, **data in** and **data out**. Your challenge in `{{WDX:EXERCISES_DIR}}/practice_explaining/` is to fill in the same information for new programs.
 
   Be _very careful_ about your formatting! Study the example comments closely and
   do your best to format yours _exactly_ the same:
@@ -478,10 +485,6 @@ title: What is JavaScript?
   // ... the rest of the code
   ```
 
-### Summary
-
-### Exercises
-
 ### Extra Resources
 
   - [Watch: **A Brief History of JavaScript, talk by Brendan Eich (creator of JavaScript)**](https://www.youtube.com/watch?v=qKJP93dWn40){:target="_blank"}
@@ -491,10 +494,10 @@ title: What is JavaScript?
   - **DeNepo**:
     - [What is Programming](https://github.com/in-tech-gration/welcome-to-js/tree/main/1-what-is-programming) [(Permalink)](https://github.com/in-tech-gration/welcome-to-js/tree/9239360311e64cb81658105b674c7fdfec97bed8/1-what-is-programming)
   
-  - [CodeCademy](https://www.codecademy.com/articles/what-is-programming)
+  - [CodeCademy](https://www.codecademy.com/articles/what-is-programming){:target="_blank"}
   
-  - [Khan Academy](https://www.khanacademy.org/computing/computer-programming/programming/intro-to-programming/v/programming-intro)
+  - [Khan Academy](https://www.khanacademy.org/computing/computer-programming/programming/intro-to-programming/v/programming-intro){:target="_blank"}
   
-  - [The Coding Train](https://www.youtube.com/watch?v=AImF__7FyzM)
+  - [The Coding Train](https://www.youtube.com/watch?v=AImF__7FyzM){:target="_blank"}
   
-  - [Practical Introduction to JS](https://shawnr.gitbooks.io/practical-introduction-to-javascript/content/what-is-programming/)
+  - [Practical Introduction to JS](https://shawnr.gitbooks.io/practical-introduction-to-javascript/content/what-is-programming/){:target="_blank"}

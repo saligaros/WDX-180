@@ -18,7 +18,7 @@ load_script_js_via_src:
   <h2 class="week-controls__previous_week">
 
     <!-- ADD CHECK FOR WEEK open:true (remove if false) -->
-    {% if false and week_num > 0 %}
+    {% if week_num > 0 %}
 
       {% assign previous_week_num = 06 | to_integer | minus: 1 | prepend: '00' | slice: -2, 2 %}
 
@@ -27,7 +27,7 @@ load_script_js_via_src:
 
   </h2>
 
-  <span>Updated: 11/11/2023</span>
+  <span>Updated: 12/11/2023</span>
 
   <h2 class="week-controls__next_week">
 
@@ -310,22 +310,54 @@ load_script_js_via_src:
 
 <!-- Summary -->
 
-<!-- Exercises -->
+### Exercises
+
+  **Installing Study Lenses**
+
+  1. Follow the steps [**described here**](https://github.com/in-tech-gration/study-lenses#to-explore-anything-on-your-computer){:target="_blank"} to install `study-lenses` globally on your machine.
+
+  If you are experiencing issues while installing and running `study-lenses`, there's an alternative. You can visit [this link](https://welcome-to-js.onrender.com/0-study-lenses/README.md?--defaults#1){:target="_blank"} to run `study-lense` as an online service. **It's important** to note, that the service might require a few minutes to launch when visiting the link for the first time, as the servers running the app tend to go to `sleep mode` when they are not being accessed by any users for a long period of time. 
+
+  **Watch a short introduction to Study Lenses**
+
+  - Watch the [**WDX180 - Study Lenses Guide**](https://youtu.be/5uCJBiQ7MkA){:target="_blank"} video to get familiar with the `study-lenses` tool that you'll be using to study code and explore various aspects of JavaScript programs.
+    - **Duration:** 12min
+
+  **Running Study Lenses on WDX-180 material**
+
+  Let's now check whether `study-lenses` is available globally and try to use it to study a simple JavaScript program.
+
+  - Open the terminal and stop any other instance of `study-lenses` that might be running, e.g. the `npm run test-content` from previous steps. You can press `Ctrl+C` on the terminal to stop the currently running process.
+
+  - Change to the following directory inside your local `WDX-180` repo: `cd curriculum/week06/exercises`.
+
+  - Run either the `study` or `lenses` command on the terminal and check whether the app opens up in the browser.
+
+  - If the app opens up in the browser, click on the `hello-world.js` file and start exploring some lenses like `flowchart`, `pseudo`, `variables`, `blanks`, `parsons`, etc.
+
+  **Give the Study Lenses repo a ⭐ Star!**
+
+  - Visit the [original repo](https://github.com/DeNepo/study-lenses){:target="_blank"} and give it a star as a gesture of appreciation for the hard work that these guys have put to make this great open source learning tool.
+
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week06/progress/progress.draft.w06.d03.csv**
+
+  You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
+
 
 <!-- Extra Resources -->
 
 ### Sources and Attributions
 
   - **DeNepo**:
-    - [What is Programming](https://github.com/in-tech-gration/welcome-to-js/tree/main/1-what-is-programming) [(Permalink)](https://github.com/in-tech-gration/welcome-to-js/tree/9239360311e64cb81658105b674c7fdfec97bed8/1-what-is-programming)
+    - [What is Programming](https://github.com/in-tech-gration/welcome-to-js/tree/main/1-what-is-programming){:target="_blank"} [(Permalink)](https://github.com/in-tech-gration/welcome-to-js/tree/9239360311e64cb81658105b674c7fdfec97bed8/1-what-is-programming)
   
-  - [CodeCademy](https://www.codecademy.com/articles/what-is-programming)
+  - [CodeCademy](https://www.codecademy.com/articles/what-is-programming){:target="_blank"}
   
-  - [Khan Academy](https://www.khanacademy.org/computing/computer-programming/programming/intro-to-programming/v/programming-intro)
+  - [Khan Academy](https://www.khanacademy.org/computing/computer-programming/programming/intro-to-programming/v/programming-intro){:target="_blank"}
   
-  - [The Coding Train](https://www.youtube.com/watch?v=AImF__7FyzM)
+  - [The Coding Train](https://www.youtube.com/watch?v=AImF__7FyzM){:target="_blank"}
   
-  - [Practical Introduction to JS](https://shawnr.gitbooks.io/practical-introduction-to-javascript/content/what-is-programming/)
+  - [Practical Introduction to JS](https://shawnr.gitbooks.io/practical-introduction-to-javascript/content/what-is-programming/){:target="_blank"}
 
   
 </details>
@@ -353,9 +385,7 @@ load_script_js_via_src:
 
   JavaScript is the only programming language supported by web browsers, this
   makes is a very common language. Every website that needs interactivity uses
-  JavaScript alongside HTML & CSS. Because people across the world with all levels
-  of programming experience are writing web pages, JavaScript has become something
-  like the English of programming languages:
+  JavaScript alongside HTML & CSS. Because people across the world with all levels of programming experience are writing web pages, JavaScript has become something like the English of programming languages:
 
   - It's everywhere, most developers will know at least a little bit of
     JavaScript.
@@ -419,7 +449,7 @@ load_script_js_via_src:
 
   You can also write your code in a script tag of an HTML file then open the HTML
   file in your browser. The JavaScript will run automatically when the page is
-  loaded. See this in action with [`./assets/1-inline-script-tag.html`](./assets/1-inline-script-tag.html).
+  loaded. See this in action with [`./assets/1-inline-script-tag.html`](https://github.com/in-tech-gration/WDX-180/blob/main/curriculum/week06/assets/1-inline-script-tag.html){:target="_blank"}.
 
   <!-- TODO: The ./assets above pointing to a folder containing code, should be managed in some way, e.g. redirect to GitHub or local repo, display them inline or through a viewer (Flems/Codesandbox/other)  -->
 
@@ -436,9 +466,7 @@ load_script_js_via_src:
   **3. Loading JS files into HTML**
 
   You can also write your code in a separate `.js` file, then load the file into
-  your HTML to execute the code. There are two different ways you can load a `.js`
-  file into your HTML, you can see them in action with [`./assets/2-separate-script-file/index.html`](./assets/2-separate-script-file/index.html) and
-  [`./assets/3-separate-module-files/index.html`](./assets/3-separate-module-files/index.html) (you'll learn more about scripts vs. modules later on).
+  your HTML to execute the code. There are two different ways you can load a `.js` file into your HTML, you can see them in action with [`./assets/2-separate-script-file/index.html`](https://github.com/in-tech-gration/WDX-180/blob/main/curriculum/week06/assets/2-separate-script-file/index.html){:target="_blank"} and [`./assets/3-separate-module-files/index.html`](https://github.com/in-tech-gration/WDX-180/blob/main/curriculum/week06/assets/3-separate-module-files/index.html){:target="_blank"} (you'll learn more about scripts vs. modules later on).
   <!-- TODO: Same as above... -->
 
   <!-- TODO: INTEGRATE: https://stackoverflow.com/a/53821485/4861760 -->
@@ -801,15 +829,30 @@ load_script_js_via_src:
 
   **Programs to Study**
 
-  A very important skill to learn as a programmer is not being afraid of code you
-  don't understand. There is always _something_ you can understand and there is
-  always a way to understand the rest. You aren't expected understand all the
-  syntax in this folder just yet.
+  A very important skill to learn as a programmer is not being afraid of code you don't understand. There is always _something_ you can understand and there is always a way to understand the rest. You aren't expected understand all the syntax in this folder just yet.
 
-  Instead focus on what you _can_ understand about each program at a higher level,
-  like in the diagram at the top of this README. For all of these examples and
-  exercises try running the program many times inputting different data and seeing
-  what comes out.
+  Instead focus on what you _can_ understand about each program at a higher level, like in the diagram at the top of this README. For all of these examples and exercises try running the program many times inputting different data and seeing what comes out.
+
+<!-- Summary -->
+
+### Exercises
+
+  **Explore Study Lenses**
+
+  Continue your exploration of the `study-lenses` tool. Run the following commands on your local copy of the `WDX-180` repo:
+
+  - `cd curriculum/week06/exercises/exploring-study-lenses`
+  - `study`
+
+  Once the `study-lenses` is up and running on your browser, click on the **README.md** link to open up the slides. Browse through the slides _(using the left and right arrow keys on your keyboard or just by pressing space)_, click on the **load** buttons to load the file and follow the study guide on each of them.
+
+  Explore these with your team.
+
+  ---
+
+
+
+  **Practice Program Explaining**
 
   Practice explaining what is happening in each program using these terms:
 
@@ -825,12 +868,7 @@ load_script_js_via_src:
   - **Test Cases**: Specific examples of data that goes in and the data that comes
     out.
 
-  <!-- TODO: Maybe this has to be removed. -->
-
-
-  In the `/examples` folder you will find a few programs with a comment describing
-  the **behavior**, **data in** and **data out**. Your challenge in `/exericses`
-  is to fill in the same information for new programs.
+ In the `curriculum/week06/assets/examples/` folder you will find a few programs with a comment describing the **behavior**, **data in** and **data out**. Your challenge in `curriculum/week06/exercises/practice_explaining/` is to fill in the same information for new programs.
 
   Be _very careful_ about your formatting! Study the example comments closely and
   do your best to format yours _exactly_ the same:
@@ -858,9 +896,10 @@ load_script_js_via_src:
   // ... the rest of the code
   ```
 
-<!-- Summary -->
+  **IMPORTANT:** Make sure to complete all the tasks found in the **daily Progress Sheet** and update the sheet accordingly. Once you've updated the sheet, don't forget to `commit` and `push`. The progress draft sheet for this day is: **/user/week06/progress/progress.draft.w06.d04.csv**
 
-<!-- Exercises -->
+  You should **NEVER** update the `draft` sheets directly, but rather work on a copy of them according to the instructions [found here](../week01/resources/PROGRESS-WORKFLOW.md).
+
 
 ### Extra Resources
 
@@ -871,19 +910,45 @@ load_script_js_via_src:
   - **DeNepo**:
     - [What is Programming](https://github.com/in-tech-gration/welcome-to-js/tree/main/1-what-is-programming) [(Permalink)](https://github.com/in-tech-gration/welcome-to-js/tree/9239360311e64cb81658105b674c7fdfec97bed8/1-what-is-programming)
   
-  - [CodeCademy](https://www.codecademy.com/articles/what-is-programming)
+  - [CodeCademy](https://www.codecademy.com/articles/what-is-programming){:target="_blank"}
   
-  - [Khan Academy](https://www.khanacademy.org/computing/computer-programming/programming/intro-to-programming/v/programming-intro)
+  - [Khan Academy](https://www.khanacademy.org/computing/computer-programming/programming/intro-to-programming/v/programming-intro){:target="_blank"}
   
-  - [The Coding Train](https://www.youtube.com/watch?v=AImF__7FyzM)
+  - [The Coding Train](https://www.youtube.com/watch?v=AImF__7FyzM){:target="_blank"}
   
-  - [Practical Introduction to JS](https://shawnr.gitbooks.io/practical-introduction-to-javascript/content/what-is-programming/)
+  - [Practical Introduction to JS](https://shawnr.gitbooks.io/practical-introduction-to-javascript/content/what-is-programming/){:target="_blank"}
 
   
 </details>
 
 <hr class="mt-1">
 
+<!-- Week 06 - Day 5 | Work in Progress -->
+<details markdown="1">
+  <summary>
+    <h2>
+      <span class="summary-day">Week 06 - Day 5</span> | Work in Progress</h2>
+  </summary>
+
+<!-- Schedule -->
+
+### Study Plan
+
+#### Work in progress...
+
+
+
+  **Stay tuned**
+
+<!-- Summary -->
+
+<!-- Exercises -->
+
+<!-- Extra Resources -->
+
+<!-- Sources and Attributions -->
+  
+</details>
 
 
 <hr class="mt-1">
