@@ -2,11 +2,41 @@
 title: Week 04 | CSS 2 & Performance
 ---
 
+<hr class="mb-0">
+
 <h1 id="{{ Week 04-CSS 2 & Performance | slugify }}">
   <span class="week-prefix">Week 04 |</span> CSS 2 & Performance
 </h1>
 
-_(Updated: 8/11/2023)_
+<div class="week-controls">
+
+  {% assign week_num = 04 | to_integer %}
+
+  <h2 class="week-controls__previous_week">
+
+    {% if week_num > 0 %}
+
+      {% assign previous_week_num = 04 | to_integer | minus: 1 | prepend: '00' | slice: -2, 2 %}
+
+      <a href="/WDX-180/curriculum/week{{ previous_week_num }}">Week {{ previous_week_num }} &#8678;</a>
+    {% endif %}
+
+  </h2>
+
+  <span>Updated: 10/11/2023</span>
+
+  <h2 class="week-controls__next_week">
+
+    {% if week_num <= 36 %}
+
+      {% assign next_week_num = 04 | to_integer | plus: 1 | prepend: '00' | slice: -2, 2 %}
+
+      <a href="/WDX-180/curriculum/week{{ next_week_num }}">&#8680; Week {{ next_week_num }}</a>
+    {% endif %}
+
+  </h2>
+
+</div>
 
 ---
 

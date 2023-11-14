@@ -1,36 +1,50 @@
 input: curriculum/schedule/weekly.draft.md
 daily_input: curriculum/schedule/daily.draft.md
-title: JavaScript Core 2
+title: JavaScript Core 1
 schedule: 
 
-# TODO: STUDY: https://eventloop.gr/Education/TechTalentSchool/javascript/intermediate.html#/1
-# TODO: STUDY: Pass by value vs pass by reference:
-# Mosh?
-# https://eventloop.gr/Education/TechTalentSchool/javascript/introduction.html#/44
-# TODO: STUDY: SCOPE
-# https://eventloop.gr/Education/TechTalentSchool/javascript/intermediate.html#/3
-# TODO: STUDY: HOISTING: https://eventloop.gr/Education/TechTalentSchool/javascript/intermediate.html#/4/5
-# TODO: STUDY: Manipulating Arrays: https://eventloop.gr/Education/TechTalentSchool/javascript/intermediate.html#/6
-# PRACTICE: https://eventloop.gr/Education/TechTalentSchool/javascript/intermediate.html#/7
-
   days:
-    1: # String Manipulation 
-      # https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods
-      # https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings
-      # file://./../modules/javascript/core/
-      module: javascript/core/
-    2: # Arrays Part 2
-      # https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections
-      # https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays
-      # file://./../modules/javascript/core/
-      module: javascript/core/
-    3: # Arrays
-      # file://./../modules/javascript/core/
-      module: javascript/core/
-    4: # Objects Part 2
-      # https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects
-      # file://./../modules/javascript/core/
-      module: javascript/core/
-    5: # Project
-      # file://./../modules/javascript/core/
-      module: javascript/core/
+    1: # Introduction to JavaScript
+      # Topics: var, let, const, Numbers, Booleans, Strings, Control Flow (if), Loops (while, for) 
+      # file://./../modules/javascript/core/intro/index.md
+      module: javascript/core/intro
+    2: # Introduction to Functions
+      # Topics: Functions (normal, arrow, higher-order), Scope, Built-ins
+      # file://./../modules/javascript/core/functions/intro_to_functions/index.md
+      module: javascript/core/functions/intro_to_functions
+    3: # Introduction to Objects
+      # file://./../modules/javascript/core/objects/intro_to_objects/index.md
+      module: javascript/core/objects/intro_to_objects
+    4: # Introduction to Arrays
+      # file://./../modules/javascript/core/arrays/intro_to_arrays/index.md
+      module: javascript/core/arrays/intro_to_arrays
+    5: # 
+      module: javascript/core
+
+# ---
+
+# TODO: Day 1?
+# Mosh video to extra resources => https://www.youtube.com/watch?v=W6NZfCO5SIk
+# STUDY: https://eventloop.gr/Education/TechTalentSchool/javascript/introduction.html#/43
+
+# TODO: Day 2? SLACK QUIZ: https://github.com/in-tech-gration/TeachMeJavaScriptLikeIm5/tree/main/5-operators
+
+# TODO: STUDY & INTEGRATE: Objects
+# https://eventloop.gr/Education/TechTalentSchool/javascript/introduction.html#/41
+# https://eventloop.gr/Education/TechTalentSchool/javascript/introduction.html#/42/3
+# EXERCISE: https://codepen.io/kostasx/pen/vQMwKp?editors=0011
+
+# TODO: Check whether the following DeNepo material can be integrated (dispersed) throughout this week's content:
+# 1) https://github.com/in-tech-gration/welcome-to-js/tree/main/1-what-is-programming
+# 2) https://github.com/in-tech-gration/welcome-to-js/blob/main/1-what-is-programming/0-javascript/README.md
+# 3) https://github.com/in-tech-gration/welcome-to-js/blob/main/1-what-is-programming/0-javascript/some-history.md
+# 4) https://github.com/in-tech-gration/welcome-to-js/tree/main/1-what-is-programming/1-the-developers
+# 5) https://github.com/in-tech-gration/welcome-to-js/tree/main/1-what-is-programming/2-the-computer
+# 6) https://github.com/in-tech-gration/welcome-to-js/tree/main/1-what-is-programming/3-the-users
+# 7) https://github.com/in-tech-gration/welcome-to-js/tree/main/1-what-is-programming/4-data-in-data-out
+
+# TODO: Integrate?
+# while loop exercise (using document.write instead):
+# https://www.w3schools.com/js/tryit.asp?filename=tryjs_while
+# for loop (using document.write instead):
+# https://www.w3schools.com/js/tryit.asp?filename=tryjs_loop_for
