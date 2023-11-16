@@ -1,16 +1,17 @@
 'use strict';
 
 /* Mirror
+mirrors an input text
 
   Data In:
-
+  any text
 
   Data Out:
-
+  the text input, mirrored along with the initial text
 
   Test Cases:
-
-
+  'my face is round' -> 'dnuor si ecaf ym | my face is round'
+  'nipsonanomimatamimonanopsin' -> 'nisponanomimatamimonanospin | nipsonanomimatamimonanopsin'
 */
 
 /* --- gather user input --- */

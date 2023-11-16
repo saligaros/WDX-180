@@ -1,14 +1,18 @@
 'use strict';
 
 /* Reverse
+reverses a text
 
   Data In:
-
+  any given text
 
   Data Out:
+  the given text along with the reversed one
 
 
   Test Cases:
+  'my face is round' -> 'my face is round -> dnuor si ecaf ym'
+  'anna mana' -> 'anna mana -> anam anna'
 
 
 */

@@ -1,14 +1,17 @@
 'use strict';
 
 /* Remove Spaces
+removes spacing between words from a given text
 
   Data In:
-
+  any given text
 
   Data Out:
-
+  the given text and then the given text without spaces between words
 
   Test Cases:
+  'Java Script' -> 'before: Java Script after: JavaScript'
+  'zavara katra nemia' -> 'before: zavara katra nemia after: zavarakatranemia'
 
 
 */

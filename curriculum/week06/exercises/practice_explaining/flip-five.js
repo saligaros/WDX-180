@@ -1,19 +1,23 @@
 'use strict';
 
-/* Flip Five
+/* Flip Five 
+This program reverses a 5 character input
 
   Data In:
-
+  any text 5 character long
 
   Data Out:
-
+  the 5 character long input, reversed
 
   Test Cases:
-
+  'asdfg' -> 'gfdsa'
+  '00001' -> '10000'
+  '32'    -> 'nope, try again'
 
 */
 
 /* --- gather user input --- */
+
 
 let input = null;
 while (true) {
