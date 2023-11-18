@@ -1,6 +1,7 @@
 html {
     font-size: 10px;
     font-family: 'Open Sans', sans-serif;
+    background-color: blueviolet;
 }
 
 h1 {
@@ -9,7 +10,7 @@ h1 {
 }
 
 h3 {
-    font-size:25px;
+    font-size: 25px;
     text-align: center; 
 }
 
@@ -19,10 +20,6 @@ p, li  {
 
 ul {
   list-style: none;
-}
-
-html {
-  background-color: blueviolet;
 }
 
 body {
