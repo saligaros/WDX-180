@@ -86,9 +86,7 @@ Variables are relatively simple, they store a value and that value can change.
 What becomes more challenging is understanding how to use variables in a
 program.
 
-Below is a few examples of what you can do with variables, the
-[naming-variables](../naming-variables) exercises go into more depth on the
-different ways you can use a variable in your programs.
+Below are a few examples of what you can do with variables:
 
 <details>
 <summary>🥚 different types</summary>
@@ -304,7 +302,7 @@ many rules and the rules aren't very complicated, you just need to learn them:
 
 - [javascript.info](https://javascript.info/variables#variable-naming)
 - [nexTRIE](https://www.youtube.com/watch?v=O5WlRR-lEDE)
-- [launchcode](ntro-to-professional-web-dev/chapters/data-and-variables/more-on-variables.html#naming-variables)
+- [launchcode](https://in-tech-gration.github.io/intro-to-professional-web-dev/chapters/data-and-variables/more-on-variables.html#naming-variables)
 
 <details>
 <summary>🥚 variable names <strong>can</strong> use numbers, letters, $, or _</summary>
@@ -525,7 +523,7 @@ alert('will throw an error'); // TypeError - not a function
 
 ## References
 
-- [launchcode](https://education.launchcode.org/intro-to-professional-web-dev/chapters/data-and-variables/variables.html)
+- [launchcode](https://in-tech-gration.github.io/intro-to-professional-web-dev/chapters/data-and-variables/variables.html)
 - [javascript.info](https://javascript.info/variables)
 - [programiz](https://www.programiz.com/javascript/variables-constants)
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)

@@ -250,10 +250,11 @@
 - [**Kostas Minaidis** / Technical Curriculum Developer](https://www.linkedin.com/in/kostas-minaidis/)
 - [**Asteris Giannoudis** / Software Development, Content Curator & Accessibility Consultant](https://www.linkedin.com/in/asteris-giannoudis/)
 - [**Gogi A. Hatzichristos** / Content Curator & Passionate Contributor](https://www.linkedin.com/in/gogi-hatzichristos/)
+- [**Leon Kountouras** / Content Curator & Passionate Contributor](https://github.com/leonalkalai/)
 - [**Maria Barkouzou** / Content Curator & Passionate Contributor](https://www.linkedin.com/in/mariabarkouzou/)
 - [**Shariar Shakhawat** / Content Curator & Passionate Contributor](https://www.linkedin.com/in/shariar-shakhawat/)
-- [**Vangelis Chirmpilidis**  / Content Curator & Passionate Contributor](https://github.com/vagelisx)
-- [**Mary Richelle**  / Content Curator & Passionate Contributor](https://github.com/MaryRichelle)
+- [**Vangelis Chirmpilidis** / Content Curator & Passionate Contributor](https://github.com/vagelisx)
+- [**Mary Richelle** / Content Curator & Passionate Contributor](https://github.com/MaryRichelle)
 - [**Evan Cole** / Educational Advisor](https://www.linkedin.com/in/evan-cole/)
 - [**Yoshi Malaise** / Educational Advisor](https://www.linkedin.com/in/yoshi-malaise/)
 - [**How about you?**](#contribute) 😉
@@ -266,6 +267,7 @@ The curriculum draws heavily on the following amazing resources:
 - [**De Nepo: Open Ed**](https://github.com/denepo/)
 - [**javascript.info** by Ilya Kantor](https://www.linkedin.com/in/iliakan/)
 - [**Kyle Simpson** aka getify, author of ___You Don't know JS___](https://www.linkedin.com/in/getify/)
+- [**LaunchCode Education**](https://github.com/LaunchCodeEducation)
 - [**Dave Gray**](https://www.linkedin.com/in/davidagray/)
 - [**Ruby Monstas**](https://rubymonstas.org/)
 
