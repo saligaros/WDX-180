@@ -18,17 +18,17 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING:'hello'
+      EXPECT:'is not excited'
+      ACTUAL:'is excited'
 
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+    TRY: changing '!==' to '===' in line 44
+    PREDICT: 'is not excited'
+    IT DID: 'is not excited'
+    EXPLAIN: the condition for tracing a '!' inside an input is now correct
 
   --- lessons learned ---
-
+  when having multiple test cases problems, correcting a condition can solve many/all of them
 
 */
 

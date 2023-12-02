@@ -31,4 +31,4 @@ while (true) {
   }
 }
 
-alert(shortStrings + '\n\n' + mediumStrings + '\n\n' + longStrings);
+alert(longStrings + '\n\n' + mediumStrings + '\n\n' + shortStrings);

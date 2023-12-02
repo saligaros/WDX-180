@@ -8,7 +8,7 @@
   you can make this change by modifying only 1 line
 */
 
-const animal = 'frog';
+const animal = 'horse';
 
 let userInput = '';
 let inputIsAboutAnimal = false;

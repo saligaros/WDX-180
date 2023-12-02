@@ -16,14 +16,26 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING:'hi'
+      EXPECT:'you entered "hi"'
+      ACTUAL: the loop continues
 
     TRY:
     PREDICT:
     IT DID:
     EXPLAIN:
+
+  2. FAILING: null 
+     EXPECT: the loop continues
+     ACTUAL: the programm stops with an error 
+     
+    TRY: switching both === to !==
+    PREDICT: fix both errors
+    IT DID: fixed the flow of the 'if' but the message is wrong
+    EXPLAIN: now the if applies and then breaks if we enter a text, in other cases (canceling or inputting nothing) the while loops  
+    TRY: adding 'message' in line 39
+    ID DID: fixed the message
+    EXPLAIN: we need to include the previously assigned message inside the new message assignment     
 
   --- lessons learned ---
 

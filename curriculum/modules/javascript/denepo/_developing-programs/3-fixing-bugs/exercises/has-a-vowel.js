@@ -18,14 +18,14 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING:''
+      EXPECT:has no vowels
+      ACTUAL:'has at least one vowel'
 
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+    TRY:switching true and false assignments of hasAVowel using '!'
+    PREDICT: 'has no vowels'
+    IT DID: 'has no vowels'
+    EXPLAIN: the boolean reason of alerting was the opposite 
 
   --- lessons learned ---
 

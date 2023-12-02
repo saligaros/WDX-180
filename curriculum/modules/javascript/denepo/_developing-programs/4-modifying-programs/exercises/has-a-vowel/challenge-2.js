@@ -13,17 +13,17 @@ while (characters === null) {
   characters = prompt('enter some characters');
 }
 
-const vowels = 'aeiouAEIOU';
+const consonants = 'bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ';
 
-let hasAVowel = false;
+let hasACons = false;
 for (const char of characters) {
-  if (vowels.includes(char)) {
-    hasAVowel = true;
+  if (consonants.includes(char)) {
+    hasACons = true;
     break;
   }
 }
 
-if (hasAVowel) {
+if (hasACons) {
   alert('"' + characters + '" has at least one vowel');
 } else {
   alert('"' + characters + '" has no vowels');

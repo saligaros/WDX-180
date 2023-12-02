@@ -16,16 +16,17 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING:a
+      EXPECT:a|a
+      ACTUAL:|a|
 
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+    TRY:switching mirrored = mirrored + character + mirrored to mirrored = character + mirrored + character
+    PREDICT: a|a
+    IT DID: corrected the output 
+    EXPLAIN: we needed the mirror in the center and the text in each side
 
   --- lessons learned ---
+    we don't have to understand 100% the logic of a code in order to fix it
 
 
 */

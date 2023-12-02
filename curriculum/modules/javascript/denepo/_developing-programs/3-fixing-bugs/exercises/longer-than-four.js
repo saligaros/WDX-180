@@ -17,12 +17,12 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING: null
+      EXPECT: 'you canceled'
+      ACTUAL: ''
 
-    TRY:
-    PREDICT:
+    TRY: removing "let" declaration of input inside while
+    PREDICT: 
     IT DID:
     EXPLAIN:
 

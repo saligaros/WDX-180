@@ -24,7 +24,8 @@ while (true) {
   }
 
   if (input.length < 5) {
-    shortStrings = shortStrings + '\n- "' + input + '"';
+    alert("no short strings allowed");
+    break;
   } else if (input.length < 10) {
     mediumStrings = mediumStrings + '\n- "' + input + '"';
   } else {
