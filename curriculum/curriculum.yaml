@@ -42,7 +42,7 @@ Syllabus:
           title: "Web APIs 2: Promises, JSON, Fetch API, Web Storage, Media"
           # STUDY: https://github.com/in-tech-gration/complete-intro-to-web-dev-v3/tree/main/lessons/06-talking-to-servers
         12: # file:///./schedule/week12.yaml (XMAS Project)
-          title: "Project Week: Combine Web APIs to build a shopping cart"
+          title: "Project Week: Combine Web APIs to build a web application"
   Intermediate:
     title: "Intermediate: WDX 120°"
     schedule:
@@ -50,6 +50,7 @@ Syllabus:
         13: # JavaScript Intermediate 1 & Git (08/01/2024 - 12/01/2024)
           # file:///./schedule/week13.yaml
           title: "JavaScript Intermediate 1 & Git"
+          # TODO: ES6
           # Clean Code, Testing, Workflow, Deploying your app
         14: # Functional Programming 1, Templating, JavaScript Frameworks (15/01/2024 - 19/01/204)
           # file:///./schedule/week14.yaml

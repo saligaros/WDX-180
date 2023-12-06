@@ -24,7 +24,7 @@ title: Week 09 | JavaScript Core 3
 
   </h2>
 
-  <span>Updated: 3/12/2023</span>
+  <span>Updated: 6/12/2023</span>
 
   <h2 class="week-controls__next_week">
 
@@ -188,7 +188,7 @@ title: Week 09 | JavaScript Core 3
 
 ### Study Plan
 
-  Make sure to follow the guides on **Setting up Study Lenses (v2) on your System**. Once `lenses2` is properly installed on your system, you can go to your `WDX-180` folder and run `lenses2` with the material for this Module:
+  Make sure to follow the guides on [**Setting up Study Lenses (v2) on your System**](https://in-tech-gration.github.io/WDX-180/curriculum/modules/javascript/denepo/setting-up-study-lenses/){:target="_blank"}. Once `lenses2` is properly installed on your system, you can go to your `WDX-180` folder and run `lenses2` with the material for this Module:
 
   - `cd WDX-180/`
   - `lenses2 curriculum/modules/javascript/denepo/_inside-js/6-using-functions/`
@@ -200,6 +200,8 @@ title: Week 09 | JavaScript Core 3
   - **3-refactoring-functions**
   - **4-reverse-engineering**
   - **5-dom-io**
+
+  > **REMINDER:** You should never create, delete or modify any files or folders outside the `user/` directory. If the Module you are studying contains exercise files and folders, they should be copied over to the `user/` folder and modified there. 
 
 <!-- Summary -->
 
@@ -244,7 +246,7 @@ title: Week 09 | JavaScript Core 3
    - **Level:** Beginner
    - **Captions:** Yes
 
-  Make sure to follow the guides on **Setting up Study Lenses (v2) on your System**. Once `lenses2` is properly installed on your system, you can go to your `WDX-180` folder and run `lenses2` with the material for this Module:
+  Make sure to follow the guides on [**Setting up Study Lenses (v2) on your System**](https://in-tech-gration.github.io/WDX-180/curriculum/modules/javascript/denepo/setting-up-study-lenses/){:target="_blank"}. Once `lenses2` is properly installed on your system, you can go to your `WDX-180` folder and run `lenses2` with the material for this Module:
 
   - `cd WDX-180/`
   - `lenses2 curriculum/modules/javascript/denepo/_inside-js/7-arrays/`
@@ -254,6 +256,8 @@ title: Week 09 | JavaScript Core 3
   - **1-isolate**
   - **2-practice**
   - **3-integrate**
+
+  > **REMINDER:** You should never create, delete or modify any files or folders outside the `user/` directory. If the Module you are studying contains exercise files and folders, they should be copied over to the `user/` folder and modified there. 
 
 <!-- Summary -->
 
@@ -293,6 +297,8 @@ title: Week 09 | JavaScript Core 3
   - **2-practice**
   - **3-implicit-return**
   - **4-integrate**
+
+  > **REMINDER:** You should never create, delete or modify any files or folders outside the `user/` directory. If the Module you are studying contains exercise files and folders, they should be copied over to the `user/` folder and modified there. 
 
 <!-- Summary -->
 
@@ -347,6 +353,8 @@ title: Week 09 | JavaScript Core 3
   You should focus and study the following modules (included within `9-multiple-interactions/`):
 
   - **1-isolate**
+
+  > **REMINDER:** You should never create, delete or modify any files or folders outside the `user/` directory. If the Module you are studying contains exercise files and folders, they should be copied over to the `user/` folder and modified there. 
 
 <!-- Summary -->
 
