@@ -67,3 +67,4 @@ function _0x5d6f() {
     return t;
   })();
 }
+g
