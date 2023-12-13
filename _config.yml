@@ -1,3 +1,5 @@
+# WARNING: WHEN UPDATING _config.yml MAKE SURE TO SYNC THE CHANGES WITH THE _offline.yml
+
 # Switched to 'midnight' Jekyll theme: https://github.com/pages-themes/midnight#usage
 remote_theme: pages-themes/midnight@v0.2.0
 plugins:
@@ -16,6 +18,8 @@ exclude:
   - public
   - tools
   - node_modules/
+  - user/
+  # OFFLINE SECTION:
   
 # CUSTOM _SASS FOLDER: https://github.com/jekyll/jekyll-sass-converter#configuration-options, https://jekyllrb.com/docs/configuration/sass/
 sass:

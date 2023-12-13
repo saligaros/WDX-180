@@ -1,5 +1,5 @@
 ---
-title: 30 Days of JavaScript - JSON
+title: JSON
 ---
 
 # JSON
@@ -32,6 +32,8 @@ JSON stands for JavaScript Object Notation. The JSON syntax is derived from Java
 ]
 }
 ```
+
+Let's watch [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford){:target="_blank"} explain how he "discovered" JSON in this [short video](https://www.youtube.com/watch?v=kc8BAR7SHJI){:target="_blank"}.
 
 The above JSON example is not much different from a normal object. Then, what is the difference ? The difference is the key of a JSON object should be with double quotes or it should be a string. JavaScript Object and JSON are very similar that we can change JSON to Object and Object to JSON.
 
@@ -433,3 +435,11 @@ console.log(txt)
     "age": 250
 }
 ```
+
+### Sources and Attributions
+
+**Content is based on the following sources:**
+
+- [30 Days Of JavaScript: JSON](https://github.com/in-tech-gration/30-Days-Of-JavaScript/blob/master/16_Day_JSON/16_day_json.md){:target="_blank"} [(Permalink)](https://github.com/in-tech-gration/30-Days-Of-JavaScript/blob/55d8e3dbc0410d64c1dc3ea5915e015a7950cf2a/16_Day_JSON/16_day_json.md){:target="_blank"}
+
+Don't forget to star this awesome [repo](https://github.com/Asabeneh/30-Days-Of-JavaScript){:target="_blank"}!
