@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>30DaysOfJavaScript:21 Day </title>
+	<style>
+		.box {			
+			padding: 10px;
+			margin: 2px auto;
+			list-style: none;
+			width: 600px;
+
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<h1>Asabeneh Yetayeh challenges in <span>2020</span></h1>
+		<h2>30DaysOfJavaScript Challenge</h2>
+		<h3 id="datetime"></h3>
+		<ul>
+			<li>30DaysOfPython Challenge Done</li>
+			<li>30DaysOfJavaScript Challenge Ongoing</li>
+			<li>30DaysOfReact Challenge Coming</li>
+			<li>30DaysOfFullStack Challenge Coming</li>
+			<li>30DaysOfDataAnalysis Challenge Coming</li>
+			<li>30DaysOfReactNative Challenge Coming</li>
+			<li>30DaysOfMachineLearning Challenge Coming</li>
+		</ul>
+	</div>
+
+	<script>
+		function updateDateTime() {
+			const now = new Date();
+			const months = ['January','February', 'March', 'April', 'May', 'June','July','August','September','October','November','December']
+			const month = months[now.getMonth()]
+			const day = now.getDate()
+			const year = now.getFullYear()
+			const time = now.toLocaleTimeString() 
+			const currentDateTime = `${month} ${day} ${year} ${time}`;
+			
+
+			document.querySelector('#datetime').textContent = currentDateTime;
+		}
+
+		setInterval(updateDateTime, 1000);
+	</script>
+	<script src="./script.js"></script>
+
+</body>
+
+</html>
